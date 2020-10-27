@@ -63,6 +63,20 @@ class Settings {
 							'label' => __( 'Decimal Separator', 'wp-car-manager' ),
 							'desc'  => __( 'The decimal separator of distance unites and prices.', 'wp-car-manager' )
 						),
+						//Added: By Reteck
+						//this array add new option in admin
+						array(
+							'name'  => 'max_photos_upload',
+							'label' => __( 'Maximo de fotos', 'wp-car-manager' ),
+							'desc'  => __( 'Maximo de fotos por usuário cadastrado.', 'wp-car-manager' )
+						),
+						//Added: By Reteck
+						//this array add new option in admin
+						array(
+							'name'  => 'max_post_of_users',
+							'label' => __( 'Maximo Post', 'wp-car-manager' ),
+							'desc'  => __( 'Maximo de posts por usuário cadastrado.', 'wp-car-manager' )
+						),						
 						array(
 							'name'  => 'thousand_separator',
 							'label' => __( 'Thousand Separator', 'wp-car-manager' ),
@@ -232,7 +246,7 @@ class Settings {
 			'decimal_separator'     => '.',
 			'thousand_separator'    => ',',
 			'distance_unit'         => 'miles',
-			'date_format'           => 'm-Y',
+			'date_format'           => 'Y',
 			'contact_email'         => get_option( 'admin_email', '' ),
 			'contact_phone'         => '',
 			'summary_data'          => apply_filters( 'wpcm_summary_data_fields', array(
@@ -246,7 +260,7 @@ class Settings {
 			'account_username'      => '1',
 			'account_role'          => 'car_seller',
 			'moderate_new_listings' => '1',
-			'listing_duration'      => '30',
+			'listing_duration'      => '', //By update Reteck
 			'page_submit'           => 0,
 			'page_dashboard'        => 0,
 			'page_listings'         => 0,

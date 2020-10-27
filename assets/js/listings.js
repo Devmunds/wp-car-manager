@@ -9,13 +9,15 @@ jQuery( function ( $ ) {
 
 var WPCM_Listings = function ( tgt ) {
 
+	var pagina = window.location.hash.substring(1);
+
 	this.is_updating = false;
 	this.nonce = jQuery( tgt ).find( '#wpcm-listings-nonce' ).val();
 	this.filters = jQuery( tgt ).find( '.wpcm-vehicle-filters:first' );
 	this.sort = jQuery( tgt ).find( '#wpcm-sort:first' );
 	this.listings = jQuery( tgt ).find( '.wpcm-vehicle-results-wrapper>.wpcm-vehicle-results:first' );
 	this.pagination = jQuery( tgt ).find( '.wpcm-vehicle-listings-pagination:first' );
-	this.page = 1;
+	this.page = pagina;
 	this.default_sort = jQuery( tgt ).data( 'sort' );
 	this.condition = jQuery( tgt ).data( 'condition' );
 	this.featured = jQuery( tgt ).data( 'featured' );
@@ -45,6 +47,8 @@ var WPCM_Listings = function ( tgt ) {
 
 	// always load vehicles on init for now
 	this.load_vehicles();
+
+	this.load_hash();
 };
 
 WPCM_Listings.prototype.init_filters = function () {
@@ -74,6 +78,32 @@ WPCM_Listings.prototype.init_filters = function () {
 	} );
 
 };
+
+// load hash history brouser - by Reteck
+WPCM_Listings.prototype.load_hash = function (){
+	
+	var instance = this;
+
+	window.onhashchange = function() {
+
+		var pagina = window.location.hash.substring(1);
+
+		instance.page = pagina;
+
+		// trigger load_vehicles()
+		instance.load_vehicles();
+		
+	};
+
+	// added hash to browser	
+	$(function() {
+		$('.wpcm-vehicle-listings-pagination').on("click", 'li a', function (e) {
+			e.preventDefault();
+			window.location.hash = $(this).attr("data-page");
+		});
+	});
+
+}
 
 WPCM_Listings.prototype.init_sort = function () {
 

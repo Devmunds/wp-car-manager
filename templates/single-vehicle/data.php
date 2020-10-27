@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$fields = apply_filters( 'wpcm_single_vehicle_data_fields', $fields, $vehicle );
 
 	// split fields into 2 arrays
-	$tables = array_chunk( $fields, ( ceil( count( $fields ) / 2 ) ) );
+	$tables = array_chunk( $fields, ( ceil( count( $fields ) / 1 ) ) ); //Upadate By Reteck
 	?>
 
 	<?php foreach ( $tables as $table_fields ) : ?>

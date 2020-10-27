@@ -81,10 +81,11 @@ final class Plugin extends Pimple\Container {
 		} );
 
 		// register image sizes
+		//Modified By Reteck
 		add_action( 'init', function () {
-			add_image_size( 'wpcm_vehicle_single', 600, 400, true );
-			add_image_size( 'wpcm_vehicle_thumbnail', 150, 150, true );
-			add_image_size( 'wpcm_vehicle_listings_item', 100, 100, true );
+			add_image_size( 'wpcm_vehicle_single', 480, 350, true );
+			add_image_size( 'wpcm_vehicle_thumbnail', 320, 300, true );
+			add_image_size( 'wpcm_vehicle_listings_item', 320, 300, true );
 		} );
 
 		// Post status object
@@ -105,6 +106,10 @@ final class Plugin extends Pimple\Container {
 		} );
 
 		if ( is_admin() ) {
+
+			// Include template functions
+			require_once( $container['file']->plugin_path() . '/includes/template-hooks.php' );
+			require_once( $container['file']->plugin_path() . '/includes/template-functions.php' );
 
 			// modify admin menu
 			add_action( 'admin_head', function () {
@@ -220,6 +225,7 @@ final class Plugin extends Pimple\Container {
 
 			// assets
 			add_action( 'wp_enqueue_scripts', array( 'Never5\\WPCarManager\\Assets', 'enqueue_frontend' ) );
+			add_action( 'wp_enqueue_scripts', array( 'Never5\\WPCarManager\\Assets', 'enqueue_body_scripts' ) );
 
 			// setup shortcode
 			add_action( 'init', function () use ( $container ) {

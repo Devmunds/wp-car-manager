@@ -5,6 +5,77 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
+ ************************ USER EXTRA FIELD ************************
+ */
+ if(!function_exists('wpcm_user_meta_form')){
+	function wpcm_user_meta_form($user){
+		?>
+		<h2>WP Car Manager</h2>
+			<table class="form-table">
+				<!--Maximo de fotos por usuário-->
+				<tr class="user-max-photos-upload-wrap">
+					<th><label for="user_max_photos_upload">Maximo de Fotos</label></th>
+					<td>
+						<input
+							type="text"
+							value="<?php echo esc_attr(get_user_meta($user->ID, 'userMeta_max_photos_upload', true)); ?>"
+							name="user_max_photos_upload"
+							id="user_max_photos_upload"
+						>
+						<p class="description">Maximo de fotos por posts</p>
+					</td>
+				</tr>
+				<!--Maximo de posts por usuários-->
+				<tr class="user-max-posts-wrap">
+					<th><label for="user_max_posts">Maximo de Posts</label></th>
+					<td>
+						<input
+							type="text"
+							value="<?php echo esc_attr(get_user_meta($user->ID, 'userMeta_max_posts', true)); ?>"
+							name="user_max_posts"
+							id="user_max_posts"
+						>
+						<p class="description">Maximo de posts permitido</p>
+					</td>
+				</tr>			
+			</table>
+		<?php	
+	}
+}
+
+if(!function_exists('wpcm_user_meta_save')){
+	function wpcm_user_meta_save($userId) {
+		if (!current_user_can('edit_user', $userId)) {
+			return;
+		}
+
+		if ( !isset( $_POST['user_max_photos_upload'] ) || empty( $_POST['user_max_photos_upload'] ) ) {
+			return false;
+		}
+		
+		if ( !isset( $_POST['user_max_posts'] ) || empty( $_POST['user_max_posts'] ) ) {
+			return false;
+		}
+
+		update_user_meta($userId, 'userMeta_max_photos_upload', $_REQUEST['user_max_photos_upload']);
+		update_user_meta($userId, 'userMeta_max_posts', $_REQUEST['user_max_posts']);
+	}
+}	
+
+if( ! function_exists('wpcm_validate_fields_in_user_profile') ){
+	function wpcm_validate_fields_in_user_profile($errors) {
+	
+		if ( ! isset( $_POST['user_max_photos_upload'] ) || empty( $_POST['user_max_photos_upload'] ) ) {
+			$errors->add( 'user_max_photos_upload', '<strong>ERRO</strong>: Informe o maximo de fotos permitido para este usuário.' );
+		}
+	
+		if ( ! isset( $_POST['user_max_posts'] ) || empty( $_POST['user_max_posts'] ) ) {
+			$errors->add( 'user_max_posts', '<strong>ERRO</strong>: Informe o maximo de posts permitido para este usuário.' );
+		}
+	}
+}
+
+/**
  * SINGLE VEHICLE
  */
 
@@ -100,7 +171,22 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 			$email = get_user_meta( $vehicle->get_author(), 'wpcm_email', true );
 
 			// get phone number
-			$phone_number = get_user_meta( $vehicle->get_author(), 'wpcm_phone', true );
+			$phone_name 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone_name', true );
+			$phone_number 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone', true );
+			$phone_name_02 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone_name_02', true );
+			$phone_number_02	= get_user_meta( $vehicle->get_author(), 'wpcm_phone_02', true );
+
+			//get location
+			$location = get_user_meta( $vehicle->get_author(), 'wpcm_location', true );
+
+			// get WhatsApp number
+			$whatsapp_name 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name', true);
+			$whatsapp_01 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_01', true);
+			$whatsapp_name_02  	= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name_02', true);
+			$whatsapp_02		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_02', true);
+			$whatsapp_name_03 	= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name_03', true);
+			$whatsapp_03 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_03', true);
+
 		} else {
 			// get email address
 			$email = wp_car_manager()->service( 'settings' )->get_option( 'contact_email' );
@@ -111,9 +197,19 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 
 		wp_car_manager()->service( 'template_manager' )->get_template_part( 'single-vehicle/contact', '',
 			array(
-				'vehicle'      => $vehicle,
-				'email'        => $email,
-				'phone_number' => $phone_number
+				'vehicle'      		=> $vehicle,
+				'email'        		=> $email,
+				'location'	   		=> $location,
+				'phone_name' 		=> $phone_name,
+				'phone_number' 		=> $phone_number,
+				'phone_name_02' 	=> $phone_name_02,
+				'phone_number_02' 	=> $phone_number_02,
+				'whatsapp_name'	   	=> $whatsapp_name,
+				'whatsapp_01'	   	=> $whatsapp_01,
+				'whatsapp_name_02'	=> $whatsapp_name_02,
+				'whatsapp_02'	   	=> $whatsapp_02,
+				'whatsapp_name_03'	=> $whatsapp_name_03,
+				'whatsapp_03'	   	=> $whatsapp_03				
 			)
 		);
 	}
@@ -241,10 +337,10 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_account_signin' ) 
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_title' ) ) {
 	function wpcm_template_submit_car_form_fields_car_title( $vehicle ) {
 		?>
-		<fieldset class="wpcm-fieldset-title">
+		<fieldset class="wpcm-fieldset-title wpcm-hidden">
 			<label for="title"><?php _e( 'Listing Title', 'wp-car-manager' ); ?></label>
 
-			<div class="wpcm-field wpcm-required-field">
+			<div class="wpcm-field">
 				<?php
 				wp_car_manager()->service( 'template_manager' )->get_template_part( 'submit-car-form/form-fields/text', '', array(
 					'field'   => array( 'key' => 'title', 'placeholder' => __( '', 'wp-car-manager' ) ),
@@ -468,3 +564,5 @@ if ( ! function_exists( 'wpcm_template_review_sign' ) ) {
 		}
 	}
 }
+
+

@@ -9,8 +9,9 @@
 			printf( __( 'You are currently signed in as <strong>%s</strong>.', 'wp-car-manager' ), $user->user_login );
 			?>
 
-			<a class="button wpcm-button"
-			   href="<?php echo apply_filters( 'wpcm_submit_car_form_account_logout_url', wp_logout_url( get_permalink() ) ); ?>"><?php _e( 'Sign out', 'wp-car-manager' ); ?></a>
+			<!--<a class="button wpcm-button"
+			   href="<?php //echo apply_filters( 'wpcm_submit_car_form_account_logout_url', wp_logout_url( get_permalink() ) ); ?>"><?php //_e( 'Sign out', 'wp-car-manager' ); ?></a>
+			-->
 		</div>
 	</fieldset>
 
@@ -22,7 +23,7 @@
 		<label><?php _e( 'Have an account?', 'wp-car-manager' ); ?></label>
 
 		<div class="wpcm-field wpcm-account-sign-in">
-			<a class="button"
+			<a class="button wpcm-button"
 			   href="<?php echo apply_filters( 'wpcm_submit_car_form_account_login_url', wp_login_url( get_permalink() ) ); ?>"><?php _e( 'Sign in', 'wp-car-manager' ); ?></a>
 
 			<?php if ( $account_creation ) : ?>

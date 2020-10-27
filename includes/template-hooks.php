@@ -5,6 +5,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
+* Load admin extra fields
+*/
+add_action('user_new_form', 'wpcm_user_meta_form'); // creating a new user
+add_action('show_user_profile', 'wpcm_user_meta_form'); // editing your own profile
+add_action('edit_user_profile', 'wpcm_user_meta_form'); // editing another user
+
+add_action('personal_options_update', 'wpcm_user_meta_save');
+add_action('edit_user_profile_update', 'wpcm_user_meta_save');
+add_action('user_register', 'wpcm_user_meta_save');
+
+add_action( 'user_profile_update_errors', 'wpcm_validate_fields_in_user_profile',10,2);
+
+
+/**
  * Before Summary Box
  *
  * @see wpcm_template_vehicle_preview_bar()
@@ -25,31 +39,37 @@ add_action( 'wpcm_vehicle_thumbnails', 'wpcm_template_vehicle_thumbnails', 20 );
 /**
  * Vehicle Summary Box
  *
- * @see wpcm_template_single_price()
+ * 
  * @see wpcm_template_single_summary_data()
  * @see wpcm_template_single_contact()
  */
-add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_price', 10 );
 add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_summary_data', 20 );
-add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_contact', 30 );
+
+
+
+
+/**
+* Update by Reteck
+*@see wpcm_template_single_price()
+*
+*/
+add_action( 'wpcm_vehicle_summary_price', 'wpcm_template_single_price', 10 );
+add_action( 'wpcm_vehicle_summary_contact', 'wpcm_template_single_contact', 30 );
 
 /**
  * Vehicle Content Box
  */
-add_action( 'wpcm_vehicle_content', 'wpcm_template_single_data', 10 );
-add_action( 'wpcm_vehicle_content', 'wpcm_template_single_content', 20 );
-add_action( 'wpcm_vehicle_content', 'wpcm_template_single_features', 30 );
-add_action( 'wpcm_vehicle_content', 'wpcm_template_single_footnote', 99 );
+add_action( 'wpcm_vehicle_content', 'wpcm_template_single_data', 10 ); // Descrição
+add_action( 'wpcm_vehicle_content_content', 'wpcm_template_single_content', 20 );
+add_action( 'wpcm_vehicle_content_features', 'wpcm_template_single_features', 30 ); //Itens do veículo
+//add_action( 'wpcm_vehicle_content', 'wpcm_template_single_footnote', 99 );
 
 // Remove the power hp from data template parts as we display this in the power kw template part
 add_filter( 'wpcm_single_vehicle_data_fields', 'wpcm_template_data_remove_power_hp', 10, 2 );
-
 /**
  ************************ LISTINGS ************************
  */
-
 add_action( 'wpcm_listings_vehicle_sort', 'wpcm_template_vehicle_listings_sort', 10 );
-
 /**
  * Vehicle Before Listings Filters
  */
@@ -121,7 +141,6 @@ add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile_title', 9
  * Vehicle Dashboard Profile
  */
 add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile', 10 );
-
 /**
  * Vehicle Dashboard Results Title
  */

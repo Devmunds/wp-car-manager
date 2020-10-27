@@ -4,14 +4,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 // get attachment ID's
-$attachment_ids = $vehicle->get_gallery_attachment_ids();
+//$attachment_ids = $vehicle->get_gallery_attachment_ids();
+
+// get featured image - destaque
+$featured_id = get_post_thumbnail_id( $vehicle->get_id() );
+
+// add id to $attachment_ids if not empty
+if ( ! empty( $featured_id ) ) {
+	$attachment_ids[] = $featured_id;
+
+	// get other images, these can only exist if there's a featured image
+	$attachment_ids = array_merge( $attachment_ids, $vehicle->get_gallery_attachment_ids() );
+}
+
 
 if ( $attachment_ids ) {
 	$loop    = 0;
-	$columns = apply_filters( 'wpcm_vehicle_thumbnails_columns', 4 );
-	?>
-	<div class="wpcm-thumbnails wpcm-<?php echo 'columns-' . $columns; ?>"><?php
-
 		foreach ( $attachment_ids as $attachment_id ) {
 
 			// get image link
@@ -20,33 +28,18 @@ if ( $attachment_ids ) {
 			// no link, no image
 			if ( ! $image_link ) {
 				continue;
-			}
-
-			// build link classes
-			$classes = array( 'zoom' );
-
-			if ( $loop == 0 || $loop % $columns == 0 ) {
-				$classes[] = 'first';
-			}
-
-			if ( ( $loop + 1 ) % $columns == 0 ) {
-				$classes[] = 'last';
-			}
-
-			$image_class = esc_attr( implode( ' ', $classes ) );
-
+			}		
 			// get image caption
 			$image_caption = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
 
-			// get image html
-			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) );
+			// get image html - get image size
+			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_single' ) );
 
-			// Output image with overlay link
-			echo apply_filters( 'wpcm_single_vehicle_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[vehicle-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $vehicle->get_id(), $image_class );
+			?>
+				<div><?php echo $image; ?></div>
+			<?php
 
 			$loop ++;
 		}
-
-		?></div>
-	<?php
 }
+?>
