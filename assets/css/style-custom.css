@@ -1,7 +1,19 @@
 /*
- * By Reteck
+ * By Devmunds
  * Version: 1.0.0
  */
+
+
+/*Profile*/
+.wpcm-dashboard-profile h2{
+    margin-bottom: 10px !important;
+}
+.wpcm-dashboard-profile p{
+    margin-bottom: 10px;
+}
+
+
+
 .wpcm-filter {
     padding: 2px !important;
 

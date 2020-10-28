@@ -6,7 +6,7 @@
 		<div class="wpcm-field wpcm-account-sign-in">
 			<?php
 			$user = wp_get_current_user();
-			printf( __( 'You are currently signed in as <strong>%s</strong>.', 'wp-car-manager' ), $user->user_login );
+			printf( __( 'You are currently signed in as <strong>%s</strong>.', 'wp-car-manager' ), ": " . $user->user_login );
 			?>
 
 			<!--<a class="button wpcm-button"

@@ -47,8 +47,8 @@ ob_start();
 					</select>
 				</div>
 				<div class="wpcm-form-control">				
-					<select id="selecionar" name="wpcm-contact-vendedor" required>
-						<option value="<?php echo $whatsapp_01; ?>">Selecione um vendedor</option>
+					<select title="Selecione um vendedor" id="selecionar" name="wpcm-contact-vendedor" required>
+						<option value="">Selecione um vendedor</option>
 						<?php if( ! empty($whatsapp_01) ): ?>
 						<option value="<?php echo $whatsapp_01; ?>" ><?php echo $whatsapp_name; ?></option>
 						<?php endif; if( ! empty($whatsapp_02) ): ?>
@@ -59,7 +59,7 @@ ob_start();
 					</select>
 				</div>															
 				<div class="wpcm-form-control">
-					<input type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required>
+					<input  type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required>
 				</div>			
 				<div class="wpcm-form-control">
 					<select name="wpcm_payment_method"> 
