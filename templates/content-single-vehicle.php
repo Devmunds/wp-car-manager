@@ -30,9 +30,11 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 						<?php do_action( 'wpcm_vehicle_content', $vehicle ); ?>
 					</div>
 					<!--Itens of Vehicle-->
-					<div class="wpcm-rtk-itens-vehicle wpcm-rtk-box">
-						<?php do_action( 'wpcm_vehicle_content_features', $vehicle ); ?>
-					</div>						
+					<?php $features = $vehicle->get_features(); if ( count( $features ) > 0 ) : ?>
+						<div class="wpcm-rtk-itens-vehicle wpcm-rtk-box">
+							<?php do_action( 'wpcm_vehicle_content_features', $vehicle ); ?>
+						</div>
+					<?php endif;  ?>						
 					<!--Decrição do Veículo-->
 					<div class="wpcm-rtk-decription wpcm-rtk-box">
 						<?php do_action('wpcm_vehicle_content_content', $vehicle); ?>

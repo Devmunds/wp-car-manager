@@ -18,14 +18,6 @@
 		</ul>
 		<?php do_action( 'wpcm_vehicle_dashboard_item_data_end', $vehicle ); ?>
 	</div>
-
-	<div class="wpcm-dashboard-item-expires">
-		<?php do_action( 'wpcm_vehicle_dashboard_item_expires_start', $vehicle ); ?>
-		<span class="wpcm-expires-on"><?php _e( 'Expires on', 'wp-car-manager' ); ?></span>
-		<strong><?php echo $expires; ?></strong>
-		<?php do_action( 'wpcm_vehicle_dashboard_item_expires_end', $vehicle ); ?>
-	</div>
-
 	<div class="wpcm-dashboard-item-actions">
 		<?php do_action( 'wpcm_vehicle_dashboard_item_actions_start', $vehicle ); ?>
 		<ul>

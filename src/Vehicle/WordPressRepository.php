@@ -161,7 +161,7 @@ class WordPressRepository implements VehicleRepository {
 			// create
 			//Update By Reteck
 			$vehicle_id = wp_insert_post( array(
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_engine() . " " . $vehicle->get_power_hp() . " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_author'  => $vehicle->get_author(),
@@ -182,7 +182,8 @@ class WordPressRepository implements VehicleRepository {
 			//Update by Reteck
 			$vehicle_id = wp_update_post( array(
 				'ID'           => $vehicle->get_id(),
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_engine() . " " . $vehicle->get_power_hp() . " " . $vehicle->get_formatted_transmission(),
+				'post_name'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_status'  => $vehicle->get_status()
