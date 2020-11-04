@@ -1,8 +1,4 @@
 <h2>
-    <?php _e( 'Veículos', 'wp-car-manager' ); ?><!--Upadate by Reteck-->
-    <?php
-    //wp_car_manager()->service( 'template_manager' )->get_template_part( 'dashboard/buttons/add-new', '', array(
-	//    'submit_url' => Never5\WPCarManager\Helper\Pages::get_page_submit()
-    //) );
-    ?>
+    <?php _e( 'Anúncios', 'wp-car-manager' ); ?><!--Upadate by Reteck-->
 </h2>
+<p id="count-anuncios-add"><?php printf( __('Anúncios cadastrados: %s','wp-car-manager'),  count_user_posts(get_current_user_id(), 'wpcm_vehicle')); ?></p>
