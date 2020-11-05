@@ -163,3 +163,8 @@ add_action( 'wpcm_dashboard_item_actions', 'wpcm_template_dashboard_button_delet
  * Vehicle Dashboard Pagination
  */
 add_action( 'wpcm_after_dashboard_results', 'wpcm_template_dashboard_pagination', 10 );
+
+
+// By Devmunds
+//this load enqueue scripts in footer
+add_action('wp_footer','wpcm_enqueue_scripts_footer');

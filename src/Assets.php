@@ -95,14 +95,6 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-		// Custom JS
-		wp_enqueue_script(
-			'wpcm_js_custom',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/custom.js' ),
-			array(),
-			wp_car_manager()->get_version()
-		);
-
 	}	
 
 	/**

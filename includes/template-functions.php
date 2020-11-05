@@ -565,4 +565,14 @@ if ( ! function_exists( 'wpcm_template_review_sign' ) ) {
 	}
 }
 
+/**
+ ************************ FOOTER************************
+ */
 
+
+// this function add scripts in footer
+if(!function_exists('wpcm_enqueue_scripts_footer')){
+	function wpcm_enqueue_scripts_footer(){
+		wp_enqueue_script('wpcm-custom', '/wp-content/plugins/wp-car-manager/assets/js/custom.js');
+	}
+}
