@@ -249,6 +249,9 @@ WPCM_Dashboard.prototype.deleteVehicle = function (row) {
 		}, function (response) {
 
 			if (response.success) {
+				
+				$('#count-anuncios-add').load(window.location.href + " " + '#count-anuncios-add');
+
 				row.fadeOut('normal', function () {
 					row.remove();
 				});
