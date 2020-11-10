@@ -15,43 +15,53 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			do_action( 'wpcm_before_vehicle_summary', $vehicle ); // Galeria de Imagens
 		?>
 	</div>
-	<div class="wpcm-container">
+	<div class="dmssr-container">
 		<div class="wpcm-wrapper">
-			<div class="wpcm-row">
+			<div class="dmssr-row">
 				<!--SECTION-->
-				<div class="wpcm-rtk-col-8">					
-					<!--Vehicle Title-->
-					<div class="wpcm-rtk-header wpcm-rtk-box">
-						<h2><?php echo  $vehicle->get_title(); ?></h2>
-						<span><i>R$ </i><?php echo number_format($vehicle->get_price(), 2, ',', '.') ; ?></span>		 
-					</div>
-					<!--Detalhes do Vehiculo-->
-					<div class="wpcm-rtk-detalhes-vehicle wpcm-rtk-box">
-						<?php do_action( 'wpcm_vehicle_content', $vehicle ); ?>
-					</div>
-					<!--Itens of Vehicle-->
-					<?php $features = $vehicle->get_features(); if ( count( $features ) > 0 ) : ?>
-						<div class="wpcm-rtk-itens-vehicle wpcm-rtk-box">
-							<?php do_action( 'wpcm_vehicle_content_features', $vehicle ); ?>
+				<div class="dmssr-md-col-1">
+					<div class="dmssr-row">					
+						<!--Vehicle Title-->
+						<div class="dmssr-content-section dmssr-mb-col-1">
+							<div class="wpcm-rtk-header wpcm-rtk-box">
+								<h2><?php echo  $vehicle->get_title(); ?></h2>
+								<span><i>R$ </i><?php echo number_format($vehicle->get_price(), 2, ',', '.') ; ?></span>		 
+							</div>
 						</div>
-					<?php endif;  ?>						
-					<!--Decrição do Veículo-->
-					<div class="wpcm-rtk-decription wpcm-rtk-box">
-						<?php do_action('wpcm_vehicle_content_content', $vehicle); ?>
-					</div>									
-				</div>
-				<!--SIDEBAR-->
-				<div class="wpcm-rtk-col-4">
-					<!--Vehicle contact-->
-					<div class="wpcm-rtk-box">
-						<?php do_action( 'wpcm_vehicle_summary_contact', $vehicle );?>
-					</div>	
+						<div class="dmssr-content-sidebar dmssr-mb-col-1">
+							<!--Vehicle contact-->
+							<div class="wpcm-rtk-box">
+								<?php do_action( 'wpcm_vehicle_summary_contact', $vehicle );?>
+							</div>	
+						</div>
+					</div>
+					<div class="dmssr-row">
+						<div class="dmssr-lg-col-1">
+							<!--Decrição do Veículo-->
+							<div class="wpcm-rtk-decription wpcm-rtk-box">
+								<?php do_action('wpcm_vehicle_content_content', $vehicle); ?>
+							</div>	
+						</div>
+						<div class="dmssr-lg-col-1">
+							<!--Itens of Vehicle-->
+							<?php $features = $vehicle->get_features(); if ( count( $features ) > 0 ) : ?>
+								<div class="wpcm-rtk-itens-vehicle wpcm-rtk-box">
+									<?php do_action( 'wpcm_vehicle_content_features', $vehicle ); ?>
+								</div>
+							<?php endif;  ?>	
+						</div>								
+						<div class="dmssr-lg-col-1">
+							<!--Detalhes do Vehiculo-->
+							<div class="wpcm-rtk-detalhes-vehicle wpcm-rtk-box">
+								<?php do_action( 'wpcm_vehicle_content', $vehicle ); ?>
+							</div>
+						</div>			
+					</div>								
 				</div>
 			</div>
 			<!--meta tag for ?-->
-			<meta itemprop="url" content="<?php the_permalink(); ?>"/>
+			<meta itemprop="url" content="<?php echo the_permalink(); ?>"/>
 		</div>
 	</div>
 </div>
-
 <?php do_action( 'wpcm_after_single_vehicle', $vehicle ); ?>

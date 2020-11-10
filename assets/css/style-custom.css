@@ -4,6 +4,66 @@
  */
 
 
+
+
+
+ .wpcm-rtk-wrap {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*MOBILE*/
+.wpcm-modal-whats-content{
+    width: 90% !important;
+    margin: 2% auto;
+}
+
+.slick-prev-next {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    border-radius: 40px !important;
+}
+.wpcm-rtk-header h2 {
+    font-size: 25px !important;
+}
+.wpcm-rtk-header span {
+    font-size: 35px !important;
+}
+
+
+/*TABLET*/
+.wpcm-modal-whats-content{
+    width: 90% !important;
+    margin: 2% auto;
+}
+
+.slick-prev-next {
+    width: 45px !important;
+    height: 45px !important;
+    line-height: 45px !important;
+    border-radius: 45px !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
+    width: 50% !important;
+}
+
+
+/*DESKTOP 1*/
+.slick-prev-next {
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    border-radius: 50px !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
+    width: 25% !important;
+}
+
+
+
+
+
 /*Profile*/
 .wpcm-dashboard-profile h2{
     margin-bottom: 10px !important;
