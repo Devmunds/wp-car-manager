@@ -9,15 +9,15 @@ ob_start();
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
 	<?php if( ! empty($phone_number) || ! empty($phone_number_02)):?>
-	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-ligue-nos">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-ligue-nos">
 		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
 	</div>
 	<?php endif; if( ! empty($email)):?>
-	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-email">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-email">
 		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i> <?php _e( 'E-mail', 'wp-car-manager' ); ?> </a>
 	</div>
 	<?php endif; if( ! empty($location)): ?>
-	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-location">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-location">
 		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> <?php _e( 'Localização', 'wp-car-manager' ) ?> </a>
 	</div>
 	<?php endif; if ( ! empty($whatsapp_01) || ! empty($whatsapp_02) || empty($whatsapp_03) ): ?>
@@ -29,7 +29,7 @@ ob_start();
 
 <!--Contact Modal WhatsApp-->
 <div id="wpcm-modal-whats" class="modal">
-	<div class="wpcm-modal-whats-content">
+	<div class="modal-content">
 		<span onclick="wpcm_modal_whats_close();" class="close">&times;</span>
 		<div class="wpcm-modal-header">
 			<h2><?php _e('Fale conosco', 'wp-car-manager') ?></h2>

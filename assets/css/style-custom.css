@@ -2,10 +2,15 @@
  * By Devmunds
  * Version: 1.0.0
  */
+.res-container{
+    max-width: 100% !important;
+}
 
 
-
-
+.wpcm-contact-col{
+    width: auto;
+    float: left;
+}
 
  .wpcm-rtk-wrap {
     padding-left: 5px;
@@ -258,7 +263,7 @@
     margin          : 2% auto;
     padding         : 20px;
     border          : 1px solid #888;
-    width           : 300px;
+    max-width: 600px;
 }
 
 .close {
@@ -366,7 +371,6 @@
     box-shadow        : 0 2px 9px 0 rgba(158, 184, 209, .41);
     -webkit-box-shadow: 0 2px 9px 0 rgba(158, 184, 209, .41);
     border-radius     : 8px;
-    margin-bottom     : 10px;
     padding           : 10px;
     overflow          : hidden;
 }
