@@ -5,19 +5,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ob_start();
 
+$cont = 0;
+
+if( ! empty($phone_number) || ! empty($phone_number_02)):
+    $cont++;
+endif;
+
+if( ! empty($location)): 
+    $cont++;
+endif; 
+
+if( ! empty($email)):
+    $cont++;
+endif; 
+
+$width = 100 / $cont;
+$width = 'width:'  . $width . '%';
+
+
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
 	<?php if( ! empty($phone_number) || ! empty($phone_number_02)):?>
-	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-ligue-nos">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-ligue-nos" style="<?php echo $width; ?>">
 		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
 	</div>
 	<?php endif; if( ! empty($email)):?>
-	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-email">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-email" style="<?php echo $width; ?>">
 		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i> <?php _e( 'E-mail', 'wp-car-manager' ); ?> </a>
 	</div>
 	<?php endif; if( ! empty($location)): ?>
-	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-location">
+	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-location" style="<?php echo $width; ?>">
 		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> <?php _e( 'Localização', 'wp-car-manager' ) ?> </a>
 	</div>
 	<?php endif; if ( ! empty($whatsapp_01) || ! empty($whatsapp_02) || empty($whatsapp_03) ): ?>
