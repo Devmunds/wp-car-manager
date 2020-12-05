@@ -47,13 +47,6 @@
 
 /*Mobile*/
 @media screen and (max-width: 768px) and (min-width: 0px) {
-    .wpcm-row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        display: -webkit-flex;
-        -webkit-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    }
     .dmssr-mb-col-1{
         position: relative;
         float: left;
