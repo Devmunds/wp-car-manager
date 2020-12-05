@@ -79,17 +79,3 @@
         </label>
     </li>
 </ul>
-<div class="wpcm-dashboard-plan">
-    <h4><?php _e( 'Plano','wp-car-manager' ) ?></h4>
-    <?php 
-        //variables
-        $wpcm_vehicles  = count_user_posts(get_current_user_id(),'wpcm_vehicle');
-        $maxposts       = get_user_meta(get_current_user_id(), 'userMeta_max_posts', true);
-        $max_photos     = get_user_meta(get_current_user_id(), 'userMeta_max_photos_upload', true);
-        
-    ?>
-    <ul class="wpcm-listing-plan">
-        <li>Maximo de fotos: <?php echo $max_photos; ?></li>
-        <li>Maximo de anúncios: <?php echo $maxposts; ?></li>
-    </ul>
-</div>

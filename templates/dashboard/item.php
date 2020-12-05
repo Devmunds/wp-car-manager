@@ -18,7 +18,7 @@
 		</ul>
 		<?php do_action( 'wpcm_vehicle_dashboard_item_data_end', $vehicle ); ?>
 	</div>
-	<div class="wpcm-dashboard-item-actions">
+	<div class="wpcm-dashboard-item-actions wpcm-dms-item-actions">
 		<?php do_action( 'wpcm_vehicle_dashboard_item_actions_start', $vehicle ); ?>
 		<ul>
 			<?php do_action( 'wpcm_dashboard_item_actions', $vehicle ); ?>

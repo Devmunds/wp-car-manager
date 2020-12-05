@@ -5,131 +5,16 @@
 .res-container{
     max-width: 100% !important;
 }
-
-
-.wpcm-contact-col{
-    float: left;
-}
-
  .wpcm-rtk-wrap {
     padding-left: 5px;
     padding-right: 5px;
 }
 
-/*MOBILE*/
-.wpcm-modal-whats-content{
-    width: 90% !important;
-    margin: 2% auto;
-}
-
-.slick-prev-next {
-    width: 40px !important;
-    height: 40px !important;
-    line-height: 40px !important;
-    border-radius: 40px !important;
-}
-.wpcm-rtk-header h2 {
-    font-size: 25px !important;
-}
-.wpcm-rtk-header span {
-    font-size: 35px !important;
-}
-
-
-/*TABLET*/
-.wpcm-modal-whats-content{
-    width: 90% !important;
-    margin: 2% auto;
-}
-
-.slick-prev-next {
-    width: 45px !important;
-    height: 45px !important;
-    line-height: 45px !important;
-    border-radius: 45px !important;
-}
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
-    width: 50% !important;
-}
-
-
-/*DESKTOP 1*/
-.slick-prev-next {
-    width: 50px !important;
-    height: 50px !important;
-    line-height: 50px !important;
-    border-radius: 50px !important;
-}
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
-    width: 25% !important;
-}
 
 
 
 
 
-/*Profile*/
-.wpcm-dashboard-profile h2{
-    margin-bottom: 10px !important;
-}
-.wpcm-dashboard-profile p{
-    margin-bottom: 10px;
-}
-
-
-
-.wpcm-filter {
-    padding: 2px !important;
-
-}
-
-.wpcm-vehicle-filters {
-    background-color: rgb(255 255 255) !important;
-    border-radius   : 8px 8px 0 0 !important;
-    padding         : 5px !important;
-}
-
-.wpcm-vehicle-sort {
-    background-color: rgb(255 255 255) !important;
-    border-radius   : 0 0 8px 8px !important;
-}
-
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/** PROFILE **/
-.wpcm-profile-sub-title {
-    border: #000000;
-}
-
-.wpcm-car-form fieldset div.wpcm-form-images-current ul {
-    margin: 0 !important;
-}
-
-.wpcm-car-form fieldset div.wpcm-form-images-current ul li {
-    margin: 0 !important;
-}
-
-.wpcm-wrap-images {
-    margin-bottom: 10px;
-}
-
-.wpcm-images-org img {
-    height: auto;
-    width : 100%;
-}
-
-/*-------------------------------------------------------------------------------*/
-.wpcm-dashboard-plan {
-    overflow: hidden;
-}
-
-.wpcm-listing-plan {
-    margin: 0;
-}
-
-.wpcm-listing-plan li {
-    list-style-type: none;
-    padding        : 10px;
-}
 
 
 .wpcm-notice-erro {
@@ -137,6 +22,7 @@
     font-size: 15px;
 }
 
+/*MODAL WHATSAPP*/
 .wpcm-modal-whats-content {
     width           : 50%;
     background-color: #fefefe;
@@ -189,26 +75,22 @@
     padding      : 10px;
     width        : 100%;
     border-radius: 4px;
+    text-align: center;
+    overflow  : hidden;
+    position  : relative;
 }
 
 .wpcm-contact-buttons a:hover {
     color: #fff;
 }
 
-.wpcm-contact-col-3 {
-    width     : 33.3333%;
+.wpcm-contact-col {
     float     : left;
-    text-align: center;
-    overflow  : hidden;
-    position  : relative;
 }
 
 .wpcm-contact-col-1 {
     width     : 100%;
     float     : left;
-    text-align: center;
-    overflow  : hidden;
-    position  : relative;
 }
 
 
@@ -282,14 +164,10 @@
 }
 
 /*-------------------------------------------------------------------------------*/
-
 .wpcm-title {
     text-transform: uppercase;
 }
-
-
 /*FALTA ORGANIZAR*/
-
 .wpcm-wrap-page {
     padding           : 15px;
     border-radius     : 15px;
@@ -298,18 +176,15 @@
     box-shadow        : 0 2px 9px 0 rgba(158, 184, 209, .41);
     -webkit-box-shadow: 0 2px 9px 0 rgba(158, 184, 209, .41);
 }
-
 .wpcm-not-logged-in p {
     font-size: 18px;
     color    : #000000;
 }
-
 .wpcm-not-logged-in a {
     background-color: #244e9e;
     padding         : 10px;
     color           : #ffffff;
 }
-
 .wpcm-not-logged-in a:hover {
     background-color: #1e4285;
     padding         : 10px;
@@ -318,24 +193,19 @@
 
 
 /*====================================================================*/
-
-
 /*RESET CONTAINER DO TEMA*/
-
 .content-area {
     width  : 100% !important;
     border : none !important;
     margin : 0 !important;
     padding: 0 !important;
 }
-
 #right-sidebar {
     display: none !important;
 }
 
 
 /*Remove datapicker pagina enviar veículos*/
-
 #ui-datepicker-div {
     display: none !important;
 }
@@ -361,10 +231,7 @@
 
 
 /*====================================================================*/
-
-
 /*STYLE SIMGLE VEHICLES*/
-
 .wpcm-rtk-box {
     background-color  : #fff;
     box-shadow        : 0 2px 9px 0 rgba(158, 184, 209, .41);
@@ -373,17 +240,14 @@
     padding           : 10px;
     overflow          : hidden;
 }
-
 .wpcm-rtk-itens-vehicle {
     background-color: #244e9e;
     color           : #fff;
 }
-
 .wpcm-rtk-itens-vehicle ul {
     margin    : 0;
     text-align: justify;
 }
-
 .wpcm-rtk-itens-vehicle ul li {
     list-style-type: none;
     text-decoration: none;
@@ -394,27 +258,21 @@
     width          : auto;
     border-radius  : 5px;
 }
-
 .wpcm-rtk-itens-vehicle ul li:hover {
     background-color: #1c3a72;
     cursor          : pointer;
 }
-
 .wpcm-rtk-itens-vehicle h2 {
     color: #fff;
 }
-
 .wpcm-rtk-decription {
     text-align: justify;
 }
-
 .wpcm-rtk-header {
     padding-left      : 2%;
     padding-top       : 25px;
     padding-bottom    : 20px;
-    /*background-color: #244e9e;*/
 }
-
 .wpcm-rtk-header h2 {
     font-size     : 2.5em;
     font-weight   : 700;
@@ -425,7 +283,6 @@
     line-height   : 4rem;
     text-transform: uppercase;
 }
-
 .wpcm-rtk-header span {
     font-size     : 3.5em;
     font-weight   : 700;
@@ -433,7 +290,6 @@
     text-transform: uppercase;
     line-height   : 7rem;
 }
-
 .wpcm-rtk-header span i {
     color     : #131313;
     font-style: normal;
@@ -441,10 +297,7 @@
 
 
 /*====================================================================*/
-
-
 /*STYLE GRID VEHICLES*/
-
 .wpcm-listings-item {
     -webkit-box-shadow: 0px 0px 3px 1px #ECECEC;
     box-shadow        : 0px 0px 3px 1px #ECECEC;
@@ -454,111 +307,89 @@
     padding           : 0px 0 15px 0 !important;
     height            : auto;
 }
-
 .wpcm-listings-item:hover {
     background-color: #e9e9e9 !important;
     zoom            : 1;
 }
-
 .wpcm-listings-item-meta ul li {
     padding-right: 10px !important;
     float        : left !important;
     color        : #000000 !important;
     font-weight  : 700 !important;
 }
-
 .wpcm-listings-item-image-wrapper {
     width : 100% !important;
     height: 100% !important;
 }
-
 .wpcm-listings-item-description {
     overflow      : hidden !important;
     width         : 100% !important;
     margin-top    : 10px;
     text-transform: uppercase;
 }
-
 .entry-header h2 {
     /*page single vehicle*/
     text-transform: uppercase !important;
     display       : none !important;
 }
-
 .wpcm-listings-item-description h3 {
     font-size  : 16px;
     font-weight: bold;
     text-align : center;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
     margin-top: 10px;
 }
-
 .wpcm-listings-item-meta label {
     text-align: center;
     color     : #474747;
 }
-
 .wpcm-listings-item-meta span {
     color      : #000000 !important;
     font-weight: 700;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper {
     position: relative !important;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a {
     padding   : 0 !important;
     min-height: 200px !important;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a:hover {
     background-color: transparent !important;
 }
-
 .wpcm-title {
     color: #244e9e !important;
 }
-
 .wpcm-listings-item-meta ul li {
     color: #474747 !important;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper {
     left : 0;
     float: none;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-description {
     padding: 3px !important;
     display: block;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
     width       : 100%;
     padding-left: 0;
     text-align  : center;
 }
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results {
     padding: 0 !important;
 }
 
 
 /*====================================================================*/
-
-
 /*STYLE BY CORRECEL DE IMAGENS*/
-
 .slider-imagens-vehicles {
     width        : 100%;
     height       : 100%;
     overflow     : hidden;
     margin-bottom: 10px;
 }
-
 .slick-prev-next {
     background-color: #244e9e;
     border-radius   : 50%;
@@ -571,27 +402,21 @@
     top             : 40%;
     line-height     : 60px;
 }
-
 .slick-prev-next i {
     color: #ffffff;
 }
-
 .slick-prev-next:hover {
     background-color: #1c3a72;
 }
-
 .wpcm-rtk-right {
     right: 2rem;
 }
-
 .wpcm-rtk-left {
     left: 2rem;
 }
-
 .wpcm-wrap-galeria {
     overflow: hidden;
 }
-
 .slick-slide {
     margin-left : 4px !important;
     margin-right: 4px !important;
@@ -599,67 +424,147 @@
 
 
 /*====================================================================*/
+/*NAVA DASHBOARD*/
+.wpcm-wrap-menu{
+    background-color: #230e80;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+.wpcm-wrap-item-menu{
+    width: 25%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.wpcm-item-menu{
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+.wpcm-item-menu i{
+    color: #230e80;
+    font-size: 50px;
+}
+.wpcm-item-menu h3{
+    margin-top: 15px;
+    text-transform: capitalize;
+}
 
 
-/*TITLE PAGE SIMGLE VEHICLE*/
 
-.wpcm-vehicle-data span {
-    color      : #244e9e;
-    font-weight: 700;
+
+
+
+/*Painel*/
+.wpcm-wrap-page-iner-dashboard{
+    padding: 30px  15px 30px 15px;
+    overflow: hidden;
+}
+.wpcm-wrap-item{
+    width: 33.3333%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.wpcm-painel-item{
+    text-align: center;
+    padding: 20px;
+}
+.wpcm-painel-item span{
+    color: azure;
+    font-size: 35px;
+}
+.wpcm-painel-item-01{
+    background-color: #3388cd;
+}
+.wpcm-painel-item-02{
+    background-color: #f8ab3e;
+}
+.wpcm-painel-item-03{
+    background-color: #21c25c;
+}
+
+.wpcm-wrap-profile li{
+    list-style-type: none;
+}
+
+
+
+.cler-dms{
+    padding: 0;
+    margin: 0;
+}
+.wpcm-dashboard{
+    min-height: 50vh;
+}
+.wpcm-dashboard-menu{
+
+}
+.wpcm-dashboard-menu li{
+    list-style-type: none;
+    float: left;
+}
+.wpcm-dashboard-menu li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+.wpcm-dashboard-button{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.wpcm-dashboard-button:hover{
+    color: #fff;
+    font-size: 16px;
+}
+.wpcm-dashboard-button-edit{
+    background-color: #5db75d;
+    border-radius: 25px !important;
+}
+.wpcm-dashboard-button-delete{
+    background-color: #d95450;
+    border-radius: 25px !important;
 }
 
 
 /*====================================================================*/
-
-
-/*DASHBOARD*/
-
-.wpcm-dashboard-button {
-    background-color: #244e9e !important;
-    border-radius   : 25px;
-}
-
-.wpcm-dashboard-button:hover {
-    background-color: #3976e6 !important;
-}
-
+/*BUTTON GERAL*/
 .wpcm-button {
-    background-color: #244e9e !important;
+    background-color: #230e80 !important;
     margin-left     : 15px;
     border-radius   : 25px;
 }
-
 .wpcm-button:hover {
-    background-color: #3976e6 !important;
+    background-color: #230e80 !important;
 }
 
 
 /*====================================================================*/
-
-
 /*CONTACT PAGE SINGLE VEHICLE*/
-
 .wpcm-rtk-form-control {
     padding      : 10px;
     margin-bottom: 7px;
     border-radius: 7px;
     width        : 100%;
 }
-
 .wpcm-rtk-shared-social {
     width: 100%;
 }
-
 .wpcm-rtk-shared {
     list-style-type: none;
     margin         : 0;
 }
-
 .wpcm-rtk-shared li:hover {
     background-color: #3976e6;
     cursor          : pointer;
 }
-
 .wpcm-button-shared {
     margin          : 2px;
     float           : left;
@@ -671,28 +576,24 @@
     border-radius   : 25px;
     display         : table;
 }
-
 .wpcm-button-shared i {
     font-size     : 25px;
     text-align    : center;
     vertical-align: middle;
     display       : table-cell;
 }
-
 .wpcm-rtk-textarea {
     resize    : none;
     max-height: 100px;
 }
 
 
-/*PROFILE*/
-
+/*MEU PERFIL*/
 .wpcm-dashboard-profile-fields input {
     padding         : 10px;
     background-color: #fff;
     border          : 1px solid #000000;
 }
-
 .wpcm-hidden {
     display: none;
 }

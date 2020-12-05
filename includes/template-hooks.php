@@ -141,6 +141,9 @@ add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile_title', 9
  * Vehicle Dashboard Profile
  */
 add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile', 10 );
+add_action( 'wpcm_dashboard_v_painel', 'wpcm_template_dashboard_v_painel', 10 );
+add_action( 'wpcm_dashboard_v_profile', 'wpcm_template_dashboard_v_profile', 10 );
+add_action( 'wpcm_dashboard_v_vehicles', 'wpcm_template_dashboard_v_vehicles', 10 );
 /**
  * Vehicle Dashboard Results Title
  */
