@@ -65,11 +65,14 @@
 		</div>
 	<?php endif; ?>
 
-	<div class="wpcm-form-image-upload" id="wpcm-car-submission-images">
-		<h3><?php _e( 'Upload New Images', 'wp-car-manager' ); ?></h3>
-		<strong><?php _e( 'Click here to upload your images', 'wp-car-manager' ); _e(' | Você pode enviar até: ' . get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true) . ' de imagens', 'wp-car-manager'); ?></strong><br/>
-		<span><?php _e( 'You can upload multiple images at the same time, the first image will be your thumbnail.', 'wp-car-manager' ); ?></span><br/>
-		<span id="max_photos_upload" hidden><?php echo $max_photos_upload; ?></span>		
+	<div class="wpcm-car-wrap-submission">
+		<div class="wpcm-car-wrap-submission-header">
+			<h3  for="wpcm-car-submission-images"><?php _e( 'Upload New Images', 'wp-car-manager' ); ?></h3>
+			<strong  for="wpcm-car-submission-images"><?php _e( 'Click here to upload your images', 'wp-car-manager' ); _e(' | Você pode enviar até: ' . get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true) . ' de imagens', 'wp-car-manager'); ?></strong><br/>
+			<span  for="wpcm-car-submission-images"><?php _e( 'You can upload multiple images at the same time, the first image will be your thumbnail.', 'wp-car-manager' ); ?></span><br/>
+			<span id="max_photos_upload" hidden><?php echo $max_photos_upload; ?></span>	
+		</div>
+		<div  class="wpcm-form-image-upload" id="wpcm-car-submission-images"></div>	
 	</div>
 
 </fieldset>
