@@ -31,6 +31,13 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
+		// frontend CSS custom By Reteck
+		wp_enqueue_style(
+			'wpcm_css_dms_responsive',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/dms-responsive.css' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
 		// flex layout by Devmunds
 		wp_enqueue_style(
 			'wpcm_css_flex_layout',

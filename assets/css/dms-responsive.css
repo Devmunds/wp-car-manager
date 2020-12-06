@@ -1,0 +1,56 @@
+.dms-container{
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+.dms-row{
+    clear: both;
+    padding-left: -5px;
+    padding-right: -5px;
+}
+
+
+
+
+/*Desktop*/
+@media (min-width: 1281px) {
+  
+  }
+  
+/*Desktop*/  
+  @media (min-width: 956px) and (max-width: 1280px) {
+    
+
+  }
+  
+ /*Tablet and Ipads*/
+  @media (min-width: 768px) and (max-width: 959px) {
+    .wpcm-item-menu h3{
+        display: none;
+    }            
+    
+  }
+  
+ /*Tablet and Ipads*/
+  @media (min-width: 768px) and (max-width: 959px) and (orientation: landscape) {
+    .wpcm-item-menu h3{
+        display: none;
+    }     
+    
+  }
+  
+ /*Tablet and Mobile*/
+  @media (min-width: 481px) and (max-width: 767px) {
+    .wpcm-item-menu h3{
+        display: none;
+    }     
+    
+  }
+
+  /*Mobile*/
+  @media (min-width: 320px) and (max-width: 480px) {
+    .wpcm-item-menu h3{
+        display: none;
+    }     
+    
+  }

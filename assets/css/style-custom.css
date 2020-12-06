@@ -453,11 +453,6 @@
     text-transform: capitalize;
 }
 
-
-
-
-
-
 /*Painel*/
 .wpcm-wrap-page-iner-dashboard{
     padding: 30px  15px 30px 15px;
@@ -474,8 +469,11 @@
     padding: 20px;
 }
 .wpcm-painel-item span{
-    color: azure;
+    color: rgb(255, 255, 255);
     font-size: 35px;
+}
+.wpcm-painel-item h3{
+    color: rgb(255, 255, 255);
 }
 .wpcm-painel-item-01{
     background-color: #3388cd;
@@ -490,8 +488,6 @@
 .wpcm-wrap-profile li{
     list-style-type: none;
 }
-
-
 
 .cler-dms{
     padding: 0;
@@ -511,11 +507,9 @@
     text-decoration: none;
     color: #ffffff;
 }
-
-
-
 .wpcm-dashboard-button{
-    padding: 10px;
+    display: block;
+    padding: 15px;
     text-align: center;
     color: #fff;
     font-size: 16px;
@@ -531,6 +525,18 @@
 .wpcm-dashboard-button-delete{
     background-color: #d95450;
     border-radius: 25px !important;
+}
+/*ANUNCIOS*/
+.wpcm-dashboard-item{
+    list-style-type: none;
+    padding: 10px !important;
+    margin-bottom: 5px !important;
+}
+.wpcm-dashboard-item-image-wrapper{
+    position: relative !important;
+    left: 0 !important;
+    width: 150px !important;
+    height: 150px !important;
 }
 
 
