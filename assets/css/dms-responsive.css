@@ -43,7 +43,7 @@
   @media (min-width: 481px) and (max-width: 767px) {
     .wpcm-item-menu h3{
         display: none;
-    }     
+    }    
     
   }
 
@@ -51,6 +51,6 @@
   @media (min-width: 320px) and (max-width: 480px) {
     .wpcm-item-menu h3{
         display: none;
-    }     
+    }
     
   }

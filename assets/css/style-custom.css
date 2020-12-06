@@ -393,10 +393,10 @@
     margin-bottom: 10px;
 }
 .slick-prev-next {
-    background-color: #244e9e;
+    background-color: #f0f8ff00;
     border-radius   : 50%;
-    width           : 60px;
-    height          : 60px;
+    width           : 40px;
+    height          : 40px;
     text-align      : center;
     cursor          : pointer;
     z-index         : 800;
@@ -406,10 +406,11 @@
 }
 .slick-prev-next i {
     color: #ffffff;
+    font-size: 30px;
 }
 .slick-prev-next:hover {
-    background-color: #1c3a72;
-}
+    background-color: #f0f8ff00;
+}    
 .wpcm-rtk-right {
     right: 2rem;
 }
