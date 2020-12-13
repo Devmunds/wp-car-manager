@@ -47,6 +47,11 @@
     display: none;
 }
 
+.wpcm-ligue-nos h6, .wpcm-email h6, .wpcm-location h6{
+    color: #fff;
+    margin: 0;
+}
+
 .wpcm-ligue-nos a {
     background-color: #0079BF;
     color           : #fff;
@@ -74,7 +79,10 @@
 
 .wpcm-contact-buttons a {
     display      : inline-block;
-    padding      : 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width        : 100%;
     border-radius: 4px;
     text-align: center;
@@ -136,6 +144,8 @@
     top             : 0;
     width           : 100%;
     height          : 100%;
+    padding-left: 30px;
+    padding-right: 30px;
     overflow        : auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
@@ -276,13 +286,10 @@
     padding-bottom    : 20px;
 }
 .wpcm-rtk-header h2 {
-    font-size     : 2.5em;
+    font-size     : 30px;
     font-weight   : 700;
     color         : #131313;
-    width         : 13.5em;
-    word-wrap     : break-word;
     margin        : 0;
-    line-height   : 4rem;
     text-transform: uppercase;
 }
 .wpcm-rtk-header span {
@@ -307,7 +314,7 @@
     border            : none !important;
     background-color  : #ffffff !important;
     padding           : 0px 0 15px 0 !important;
-    height            : auto;
+    height: 360px;
 }
 .wpcm-listings-item:hover {
     background-color: #e9e9e9 !important;
@@ -383,7 +390,6 @@
     padding: 0 !important;
 }
 
-
 /*====================================================================*/
 /*STYLE BY CORRECEL DE IMAGENS*/
 .slider-imagens-vehicles {
@@ -393,23 +399,23 @@
     margin-bottom: 10px;
 }
 .slick-prev-next {
-    background-color: #f0f8ff00;
+    background-color: #eaeaea98;
     border-radius   : 50%;
-    width           : 40px;
-    height          : 40px;
+    width           : 60px;
+    height          : 60px;
     text-align      : center;
     cursor          : pointer;
-    z-index         : 800;
+    z-index         : 1;
     position        : absolute;
     top             : 40%;
     line-height     : 60px;
 }
 .slick-prev-next i {
-    color: #ffffff;
-    font-size: 30px;
+    color: #000000;
+    font-size: 20px;
 }
 .slick-prev-next:hover {
-    background-color: #f0f8ff00;
+    background-color: #eaeaea;
 }    
 .wpcm-rtk-right {
     right: 2rem;

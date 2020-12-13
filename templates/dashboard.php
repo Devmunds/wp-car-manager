@@ -10,7 +10,7 @@ do_action( 'wpcm_before_dashboard' );
 		<div class="wpcm-wrap-menu">
 			<div class="wpcm-dashboard-menu">				
 				<div class="wpcm-wrap-item-menu">
-					<a href="http://localhost/devplugins/meus-carros?item=1">
+					<a href="/meus-carros?item=1">
 						<div class="wpcm-item-menu">
 								<i class="fas fa-tachometer-alt"></i>
 								<h3>Dashboard</h3>						
@@ -18,7 +18,7 @@ do_action( 'wpcm_before_dashboard' );
 					</a>
 				</div>
 				<div class="wpcm-wrap-item-menu">
-					<a href="http://localhost/devplugins/meus-carros?item=2">
+					<a href="/meus-carros?item=2">
 						<div class="wpcm-item-menu">						
 								<i class="fas fa-user-circle"></i> 
 								<h3><?php  $user = wp_get_current_user(); echo $user->user_login;?></h3>						
@@ -26,7 +26,7 @@ do_action( 'wpcm_before_dashboard' );
 					</a>
 				</div>
 				<div class="wpcm-wrap-item-menu">
-					<a href="http://localhost/devplugins/meus-carros?item=3">
+					<a href="/meus-carros?item=3">
 						<div class="wpcm-item-menu">						
 								<i class="fas fa-car-alt"></i> 
 								<h3>Anúncios</h3>						
@@ -34,7 +34,7 @@ do_action( 'wpcm_before_dashboard' );
 					</a>
 				</div>	
 				<div class="wpcm-wrap-item-menu">
-					<a href="http://localhost/devplugins/enviar-carros/	">
+					<a href="/enviar-carro/	">
 						<div class="wpcm-item-menu">						
 								<i class="fas fa-plus-circle"></i> 
 								<h3>Publicar</h3>						

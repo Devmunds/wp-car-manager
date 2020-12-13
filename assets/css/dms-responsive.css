@@ -1,7 +1,8 @@
 .dms-container{
     width: 100%;
     padding-left: 5px;
-    padding-right: 5px;    
+    padding-right: 5px;
+    margin: 0;    
 }
 .dms-row{
     clear: both;
@@ -9,48 +10,271 @@
     padding-right: -5px;
 }
 
-
-
-
 /*Desktop*/
 @media (min-width: 1281px) {
-  
+    .dms-col-md-8{
+        width: 66.6666%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 33.3333%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+    .wpcm-rtk-header {
+        min-height: 198px;
+    }
   }
   
 /*Desktop*/  
-  @media (min-width: 956px) and (max-width: 1280px) {
-    
-
+  @media (min-width: 960px) and (max-width: 1280px) {
+    .dms-col-md-8{
+        width: 60%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 40%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+    .wpcm-rtk-header {
+        min-height: 198px;
+    }    
   }
   
  /*Tablet and Ipads*/
   @media (min-width: 768px) and (max-width: 959px) {
+    .dms-col-md-8{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+
+
+    .wpcm-rtk-header h2 {
+        font-size     : 30px;
+    }
+    .wpcm-rtk-header span {
+        font-size     : 40px;
+    }
+
+
     .wpcm-item-menu h3{
         display: none;
     }            
-    
+    .slick-prev-next {
+        background-color: #eaeaea98;
+        width: 46px;
+        height: 46px;
+        border-radius   : 50%;
+        text-align      : center;
+        cursor          : pointer;
+        position        : absolute;
+        top             : 80%;
+        line-height     : 51px;
+    }
+    .slick-prev-next i {
+        color: #000000;
+        font-size: 20px;
+    }
+    .slick-prev-next:hover {
+        background-color: #eaeaea;
+    }    
+    .wpcm-rtk-right {
+        right: 1rem;
+    }
+    .wpcm-rtk-left {
+        left: 1rem;
+    }
+
+
+
   }
   
  /*Tablet and Ipads*/
   @media (min-width: 768px) and (max-width: 959px) and (orientation: landscape) {
+    .wpcm-rtk-header h2 {
+        font-size     : 30px;
+    }
+    .wpcm-rtk-header span {
+        font-size     : 40px;
+    }
+
+    .dms-col-md-8{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+
+
+
+
+
     .wpcm-item-menu h3{
         display: none;
-    }     
+    } 
+    .slick-prev-next {
+        background-color: #eaeaea98;
+        width: 46px;
+        height: 46px;
+        border-radius   : 50%;
+        text-align      : center;
+        cursor          : pointer;
+        position        : absolute;
+        top             : 80%;
+        line-height     : 51px;
+    }
+    .slick-prev-next i {
+        color: #000000;
+        font-size: 20px;
+    }
+    .slick-prev-next:hover {
+        background-color: #eaeaea;
+    }    
+    .wpcm-rtk-right {
+        right: 1rem;
+    }
+    .wpcm-rtk-left {
+        left: 1rem;
+    }    
     
   }
   
  /*Tablet and Mobile*/
   @media (min-width: 481px) and (max-width: 767px) {
+    .dms-col-md-8{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+
+    .wpcm-rtk-header h2 {
+        font-size     : 22px;
+    }
+    .wpcm-rtk-header span {
+        font-size     : 35px;
+    }
     .wpcm-item-menu h3{
         display: none;
+    }
+    
+    .slick-prev-next {
+        background-color: #eaeaea98;
+        width: 46px;
+        height: 46px;
+        border-radius   : 50%;
+        text-align      : center;
+        cursor          : pointer;
+        position        : absolute;
+        top             : 80%;
+        line-height     : 51px;
+    }
+    .slick-prev-next i {
+        color: #000000;
+        font-size: 20px;
+    }
+    .slick-prev-next:hover {
+        background-color: #eaeaea;
     }    
+    .wpcm-rtk-right {
+        right: 1rem;
+    }
+    .wpcm-rtk-left {
+        left: 1rem;
+    }
+
     
   }
 
   /*Mobile*/
   @media (min-width: 320px) and (max-width: 480px) {
+    .dms-col-md-8{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .dms-col-md-4{
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px; 
+        margin-bottom: 10px;                            
+    }
+
+
+    .wpcm-rtk-header h2 {
+        font-size     : 22px;
+    }
+    .wpcm-rtk-header span {
+        font-size     : 35px;
+    }
+
     .wpcm-item-menu h3{
         display: none;
     }
-    
+    .slick-prev-next {
+        background-color: #eaeaea98;
+        width: 46px;
+        height: 46px;
+        border-radius   : 50%;
+        text-align      : center;
+        cursor          : pointer;
+        position        : absolute;
+        top             : 80%;
+        line-height     : 51px;
+    }
+    .slick-prev-next i {
+        color: #000000;
+        font-size: 20px;
+    }
+    .slick-prev-next:hover {
+        background-color: #eaeaea;
+    }    
+    .wpcm-rtk-right {
+        right: 1rem;
+    }
+    .wpcm-rtk-left {
+        left: 1rem;
+    }
+
+
   }

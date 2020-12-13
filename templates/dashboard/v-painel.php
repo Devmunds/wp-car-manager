@@ -12,7 +12,7 @@
     <div class="wpcm-wrap-painel">
         <div class="wpcm-wrap-item">
             <div class="wpcm-painel-item wpcm-painel-item-01"> 
-                <span><?php echo $max_post; ?></span>
+                <span><?php echo $wpcm_vehicles; ?></span>
                 <h3>Anúncios<br/>cadastrados<h3>
             </div>
         </div>

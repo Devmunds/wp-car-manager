@@ -28,15 +28,15 @@ $width = 'width:'  . $width . '%';
 	<h3>Fale com o vendedor</h3>
 	<?php if( ! empty($phone_number) || ! empty($phone_number_02)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-ligue-nos" style="<?php echo $width; ?>">
-		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
+		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <h6><?php _e( ' Ligue-nos', 'wp-car-manager' ); ?></h6> </a>
 	</div>
 	<?php endif; if( ! empty($email)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-email" style="<?php echo $width; ?>">
-		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i> <?php _e( 'E-mail', 'wp-car-manager' ); ?> </a>
+		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i><h6> <?php _e( 'E-mail', 'wp-car-manager' ); ?></h6></a>
 	</div>
 	<?php endif; if( ! empty($location)): ?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-location" style="<?php echo $width; ?>">
-		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> <?php _e( 'Localização', 'wp-car-manager' ) ?> </a>
+		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i><h6> <?php _e( 'Localização', 'wp-car-manager' ) ?></h6> </a>
 	</div>
 	<?php endif; if ( ! empty($whatsapp_01) || ! empty($whatsapp_02) || empty($whatsapp_03) ): ?>
 		<div class="wpcm-contact-buttons wpcm-contact-col-1 wpcm-whatsapp">
@@ -58,14 +58,14 @@ $width = 'width:'  . $width . '%';
 					<label>O que você deseja?</label>
 				</div>
 				<div class="wpcm-form-control">				
-					<select id="selecionar" name="wpcm-contact-type">
+					<select id="selecionar" name="wpcm-contact-type" required oninvalid="setCustomValidity('Selecione um vendedor!')" oninput="setCustomValidity('')">
 						<option value="Não selecionado">Selecione a resposta</option>
 						<option data-section="Comprar" value="Comprar" >Comprar</option>
 						<option data-section="Trocar" value="Trocar" >Trocar</option>
 					</select>
 				</div>
 				<div class="wpcm-form-control">				
-					<select title="Selecione um vendedor" id="selecionar" name="wpcm-contact-vendedor" required>
+					<select title="Selecione um vendedor" id="selecionar" name="wpcm-contact-vendedor" required oninvalid="setCustomValidity('Selecione um vendedor!')" oninput="setCustomValidity('')">
 						<option value="">Selecione um vendedor</option>
 						<?php if( ! empty($whatsapp_01) ): ?>
 						<option value="<?php echo $whatsapp_01; ?>" ><?php echo $whatsapp_name; ?></option>
@@ -77,7 +77,7 @@ $width = 'width:'  . $width . '%';
 					</select>
 				</div>															
 				<div class="wpcm-form-control">
-					<input  type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required>
+					<input  type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required oninvalid="setCustomValidity('Nome obrigatório!')" oninput="setCustomValidity('')">
 				</div>			
 				<div class="wpcm-form-control">
 					<select name="wpcm_payment_method"> 
