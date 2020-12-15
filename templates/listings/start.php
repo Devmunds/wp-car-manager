@@ -1,2 +1,2 @@
 <!--Modified By Reteck-->
-<ul class="wpcm-vehicle-results wpcm-row">
+<div class="wpcm-vehicle-results rtk-row">

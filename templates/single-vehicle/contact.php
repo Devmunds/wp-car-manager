@@ -58,7 +58,7 @@ $width = 'width:'  . $width . '%';
 					<label>O que você deseja?</label>
 				</div>
 				<div class="wpcm-form-control">				
-					<select id="selecionar" name="wpcm-contact-type" required oninvalid="setCustomValidity('Selecione um vendedor!')" oninput="setCustomValidity('')">
+					<select id="selecionar" name="wpcm-contact-type">
 						<option value="Não selecionado">Selecione a resposta</option>
 						<option data-section="Comprar" value="Comprar" >Comprar</option>
 						<option data-section="Trocar" value="Trocar" >Trocar</option>
@@ -145,7 +145,7 @@ $width = 'width:'  . $width . '%';
 			
 			$whats_number = $_POST['wpcm-contact-vendedor'];
 
-			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site Quero Acelerar e gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site Quero Acelerar e gostaria de saber mais sobre  o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 

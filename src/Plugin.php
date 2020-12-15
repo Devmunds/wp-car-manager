@@ -84,8 +84,8 @@ final class Plugin extends Pimple\Container {
 		//Modified By Reteck
 		add_action( 'init', function () {
 			add_image_size( 'wpcm_vehicle_single', 480, 350, true );
-			add_image_size( 'wpcm_vehicle_thumbnail', 320, 300, true );
-			add_image_size( 'wpcm_vehicle_listings_item', 320, 300, true );
+			add_image_size( 'wpcm_vehicle_thumbnail', 250, 178, true );
+			add_image_size( 'wpcm_vehicle_listings_item', 250, 178, true );
 		} );
 
 		// Post status object

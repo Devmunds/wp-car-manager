@@ -1,350 +1,506 @@
+/*
+* By Reteck Informática
+* vs:1.0.0
+*/
 * {
     box-sizing: border-box !important;
     -moz-box-sizing: border-box !important;
 }
-
-/*containar*/
-.dmssr-container {
-    width: 100%;
+.rtk-container{
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.dmssr-wrapper {
     width: 100%;
-    overflow: hidden;
+    padding: 0;
 }
-
-.dmssr-row {
+.rtk-row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.rtk-row::before,
+.rtk-row::after{
     display: block;
-    margin-left: -6px;
-    margin-right: -6px;
 }
-
-.dmssr-row:before,
-.dmssr-row:after {
-    content: "";
-    display: table;
-}
-
-.dmssr-row:after {
+.rtk-row::after{
     clear: both;
 }
 
-.dmssr-content-section{
-    width: 66.6667%;
-    float: left;
-    padding: 6px;
-}
-.dmssr-content-sidebar{
-    width: 33.333%;
-    float: left;
-    padding: 6px;
-}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-
-/*Mobile*/
-@media screen and (max-width: 768px) and (min-width: 0px) {
-    .dmssr-mb-col-1{
+@media (min-width: 1281px) {
+    .rtk-col-md-1{
         position: relative;
-        float: left;
-        width: 100%;
-        padding: 6px;
+        padding: 5px;
+        width: 8.33333%;
+        float: left;        
     }
-    .dmssr-mb-col-2 {
+    .rtk-col-md-2{
         position: relative;
-        float: left;
-        width: 50%;
-        padding: 6px;
-    }
-    .dmssr-mb-col-3{
-        position: relative;
-        float: left;
-        width: 33.333%;
-        padding: 6px;
-    }
-    .dmssr-mb-col-4{
-        position: relative;
-        float: left;
-        width: 25%;
-        padding: 6px;
-    }
-    .dmssr-mb-col-5{
-        position: relative;
-        float: left;
+        padding: 5px;       
         width: 20%;
-        padding: 6px;
-    }
-    .dmssr-mb-col-6{
-        position: relative;
         float: left;
-        width: 16.6666%;
-        padding: 6px;
     }
-    .dmssr-mb-col-7{
+    .rtk-col-md-3{
         position: relative;
+        padding: 5px;      
+        width: 25%;
         float: left;
-        width: 14.2857%;
-        padding: 6px;
     }
-    .dmssr-mb-col-8{
-        position: relative;
+    .rtk-col-md-4{
+        position: relative;   
+        padding: 5px;        
+        width: 33.3333%;
         float: left;
-        width: 12.5%;
-        padding: 6px;
     }
-    .dmssr-mb-col-9{
+    .rtk-col-md-5{
         position: relative;
+        padding: 5px;      
+        width: 41.6666%;
         float: left;
-        width: 11.1111%;
-        padding: 6px;
     }
-    .dmssr-mb-col-10{
+    .rtk-col-md-6{
         position: relative;
+        padding: 5px;     
+        width: 50%;
         float: left;
-        width: 10%;
-        padding: 6px;
     }
-    .dmssr-mb-col-11{
+    .rtk-col-md-7{
         position: relative;
+        padding: 5px;       
+        width: 58.3333%;
         float: left;
-        width: 9.0909%;
-        padding: 6px;
     }
-    .dmssr-mb-col-12{
-        position: relative;
+    .rtk-col-md-8{
+        position: relative;     
+        padding: 5px;        
+        width: 66.6666%;
         float: left;
-        width: 8.3333%;
-        padding: 6px;
+    }
+    .rtk-col-md-9{
+        position: relative;
+        padding: 5px;       
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-md-10{
+        position: relative;
+        padding: 5px;       
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-md-11{
+        position: relative;
+        padding: 5px;     
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-md-12{
+        position: relative;     
+        padding: 5px;        
+        width: 100%;        
+        float: left;
+    }
+
+}
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 960px) and (max-width: 1280px) {
+    .rtk-col-md-1{
+        position: relative;
+        padding: 5px;
+        width: 8.33333%;
+        float: left;
+    }
+    .rtk-col-md-2{
+        position: relative;
+        padding: 5px;       
+        width: 25%;
+        float: left;
+    }
+    .rtk-col-md-3{
+        position: relative;
+        padding: 5px;        
+        width: 25%;
+        float: left;
+    }
+    .rtk-col-md-4{
+        position: relative;
+        padding: 5px;       
+        width: 33.3333%;
+        float: left;
+    }
+    .rtk-col-md-5{
+        position: relative;
+        padding: 5px;       
+        width: 41.6666%;
+        float: left;
+    }
+    .rtk-col-md-6{
+        position: relative;
+        padding: 5px;;        
+        width: 50%;
+        float: left;
+    }
+    .rtk-col-md-7{
+        position: relative;
+        padding: 5px;       
+        width: 58.3333%;
+        float: left;
+    }
+    .rtk-col-md-8{
+        position: relative;
+        padding: 5px;        
+        width: 66.6666%;
+        float: left;
+    }
+    .rtk-col-md-9{
+        position: relative;
+        padding: 5px;      
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-md-10{
+        position: relative;
+        padding: 5px;       
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-md-11{
+        position: relative;
+        padding: 5px;      
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-md-12{
+        position: relative;
+        padding: 5px;      
+        width: 100%;
+        float: left;
     }
 }
 
-/*Tablet*/
-@media screen and (max-width: 960px) and (min-width: 764px) {
-    .dmssr-tb-col-1{
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .rtk-col-sm-1{
         position: relative;
+        padding: 5px;       
+        width: 8.33333%;
         float: left;
-        width: 100%;
-        padding: 6px;
     }
-    .dmssr-tb-col-2 {
+    .rtk-col-sm-2{
         position: relative;
-        float: left;
-        width: 50%;
-        padding: 6px;
-    }
-    .dmssr-tb-col-3{
-        position: relative;
-        float: left;
-        width: 33.333%;
-        padding: 6px;
-    }
-    .dmssr-tb-col-4{
-        position: relative;
-        float: left;
-        width: 25%;
-        padding: 6px;
-    }
-    .dmssr-tb-col-5{
-        position: relative;
-        float: left;
-        width: 20%;
-        padding: 6px;
-    }
-    .dmssr-tb-col-6{
-        position: relative;
-        float: left;
+        padding: 5px;        
         width: 16.6666%;
-        padding: 6px;
-    }
-    .dmssr-tb-col-7{
-        position: relative;
         float: left;
-        width: 14.2857%;
-        padding: 6px;
     }
-    .dmssr-tb-col-8{
+    .rtk-col-sm-3{
         position: relative;
+        padding: 5px;        
+        width: 25%;
         float: left;
-        width: 12.5%;
-        padding: 6px;
     }
-    .dmssr-tb-col-9{
+    .rtk-col-sm-4{
         position: relative;
+        padding: 5px;        
+        width: 33.3333%;
         float: left;
-        width: 11.1111%;
-        padding: 6px;
     }
-    .dmssr-tb-col-10{
+    .rtk-col-sm-5{
         position: relative;
+        padding: 5px;       
+        width: 41.6666%;
         float: left;
-        width: 10%;
-        padding: 6px;
     }
-    .dmssr-tb-col-11{
+    .rtk-col-sm-6{
         position: relative;
+        padding: 5px;       
+        width: 50%;
         float: left;
-        width: 9.0909%;
-        padding: 6px;
     }
-    .dmssr-tb-col-12{
+    .rtk-col-sm-7{
         position: relative;
+        padding: 5px;       
+        width: 58.3333%;
         float: left;
-        width: 8.3333%;
-        padding: 6px;
+    }
+    .rtk-col-sm-8{
+        position: relative;
+        padding: 5px;       
+        width: 66.6666%;
+        float: left;
+    }
+    .rtk-col-sm-9{
+        position: relative;
+        padding: 5px;       
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-sm-10{
+        position: relative;
+        padding: 5px;      
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-sm-11{
+        position: relative;
+        padding: 5px;      
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-sm-12{
+        position: relative;
+        padding: 5px;        
+        width: 100%;
+        float: left;
     }
 }
 
-/*Desktop*/
-@media screen and (max-width: 1024px) and (min-width: 959px) {
-    .dmssr-md-col-1{
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 959px) and (orientation: landscape) {
+    .rtk-col-sm-1{
         position: relative;
+        padding: 5px;      
+        width: 8.33333%;
         float: left;
-        width: 100%;
-        padding: 6px;
     }
-    .dmssr-md-col-2 {
+    .rtk-col-sm-2{
         position: relative;
-        float: left;
-        width: 50%;
-        padding: 6px;
-    }
-    .dmssr-md-col-3{
-        position: relative;
-        float: left;
-        width: 33.333%;
-        padding: 6px;
-    }
-    .dmssr-md-col-4{
-        position: relative;
-        float: left;
-        width: 25%;
-        padding: 6px;
-    }
-    .dmssr-md-col-5{
-        position: relative;
-        float: left;
-        width: 20%;
-        padding: 6px;
-    }
-    .dmssr-md-col-6{
-        position: relative;
-        float: left;
+        padding: 5px;      
         width: 16.6666%;
-        padding: 6px;
-    }
-    .dmssr-md-col-7{
-        position: relative;
         float: left;
-        width: 14.2857%;
-        padding: 6px;
     }
-    .dmssr-md-col-8{
+    .rtk-col-sm-3{
         position: relative;
+        padding: 5px;      
+        width: 25%;
         float: left;
-        width: 12.5%;
-        padding: 6px;
     }
-    .dmssr-md-col-9{
+    .rtk-col-sm-4{
         position: relative;
+        padding: 5px;    
+        width: 33.3333%;
         float: left;
-        width: 11.1111%;
-        padding: 6px;
     }
-    .dmssr-md-col-10{
+    .rtk-col-sm-5{
         position: relative;
+        padding: 5px;       
+        width: 41.6666%;
         float: left;
-        width: 10%;
-        padding: 6px;
     }
-    .dmssr-md-col-11{
+    .rtk-col-sm-6{
         position: relative;
+        padding: 5px;     
+        width: 50%;
         float: left;
-        width: 9.0909%;
-        padding: 6px;
     }
-    .dmssr-md-col-12{
+    .rtk-col-sm-7{
         position: relative;
+        padding: 5px;     
+        width: 58.3333%;
         float: left;
-        width: 8.3333%;
-        padding: 6px;
+    }
+    .rtk-col-sm-8{
+        position: relative;
+        padding: 5px;     
+        width: 66.6666%;
+        float: left;
+    }
+    .rtk-col-sm-9{
+        position: relative;
+        padding: 5px;      
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-sm-10{
+        position: relative;
+        padding: 5px;    
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-sm-11{
+        position: relative;
+        padding: 5px;     
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-sm-12{
+        position: relative;
+        padding: 5px;   
+        width: 100%;
+        float: left;
     }
 }
 
-/*Desktop*/
-@media screen and (min-width: 1025px) {
-    .dmssr-lg-col-1{
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .rtk-col-xs-1{
         position: relative;
+        padding: 5px;   
+        width: 8.33333%;
         float: left;
-        width: 100%;
-        padding: 6px;
     }
-    .dmssr-lg-col-2 {
+    .rtk-col-xs-2{
         position: relative;
-        float: left;
-        width: 50%;
-        padding: 6px;
-    }
-    .dmssr-lg-col-3{
-        position: relative;
-        float: left;
-        width: 33.333%;
-        padding: 6px;
-    }
-    .dmssr-lg-col-4{
-        position: relative;
-        float: left;
-        width: 25%;
-        padding: 6px;
-    }
-    .dmssr-lg-col-5{
-        position: relative;
-        float: left;
-        width: 20%;
-        padding: 6px;
-    }
-    .dmssr-lg-col-6{
-        position: relative;
-        float: left;
+        padding: 5px;     
         width: 16.6666%;
-        padding: 6px;
-    }
-    .dmssr-lg-col-7{
-        position: relative;
         float: left;
-        width: 14.2857%;
-        padding: 6px;
     }
-    .dmssr-lg-col-8{
+    .rtk-col-xs-3{
         position: relative;
+        padding: 5px;      
+        width: 25%;
         float: left;
-        width: 12.5%;
-        padding: 6px;
     }
-    .dmssr-lg-col-9{
+    .rtk-col-xs-4{
         position: relative;
+        padding: 5px;     
+        width: 33.3333%;
         float: left;
-        width: 11.1111%;
-        padding: 6px;
     }
-    .dmssr-lg-col-10{
+    .rtk-col-xs-5{
         position: relative;
+        padding: 5px;       
+        width: 41.6666%;
         float: left;
-        width: 10%;
-        padding: 6px;
     }
-    .dmssr-lg-col-11{
+    .rtk-col-xs-6{
         position: relative;
+        padding: 5px;     
+        width: 50%;
         float: left;
-        width: 9.0909%;
-        padding: 6px;
     }
-    .dmssr-lg-col-12{
+    .rtk-col-xs-7{
         position: relative;
+        padding: 5px;       
+        width: 58.3333%;
         float: left;
-        width: 8.3333%;
-        padding: 6px;
+    }
+    .rtk-col-xs-8{
+        position: relative;
+        padding: 5px;     
+        width: 66.6666%;
+        float: left;
+    }
+    .rtk-col-xs-9{
+        position: relative;
+        padding: 5px;      
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-xs-10{
+        position: relative;
+        padding: 5px;       
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-xs-11{
+        position: relative;
+        padding: 5px;      
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-xs-12{
+        position: relative;
+        padding: 5px;       
+        width: 100%;
+        float: left;
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .rtk-col-xs-1{
+        position: relative;
+        padding: 5px;    
+        width: 8.33333%;
+        float: left;
+    }
+    .rtk-col-xs-2{
+        position: relative;
+        padding: 5px;     
+        width: 16.6666%;
+        float: left;
+    }
+    .rtk-col-xs-3{
+        position: relative;
+        padding: 5px;       
+        width: 25%;
+        float: left;
+    }
+    .rtk-col-xs-4{
+        position: relative;
+        padding: 5px;      
+        width: 33.3333%;
+        float: left;
+    }
+    .rtk-col-xs-5{
+        position: relative;
+        padding: 5px;     
+        width: 41.6666%;
+        float: left;
+    }
+    .rtk-col-xs-6{
+        position: relative;
+        padding: 5px;      
+        width: 50%;
+        float: left;
+    }
+    .rtk-col-xs-7{
+        position: relative;
+        padding: 5px;      
+        width: 58.3333%;
+        float: left;
+    }
+    .rtk-col-xs-8{
+        position: relative;
+        padding: 5px;      
+        width: 66.6666%;
+        float: left;
+    }
+    .rtk-col-xs-9{
+        position: relative;
+        padding: 5px;      
+        width: 75%;
+        float: left;
+    }
+    .rtk-col-xs-10{
+        position: relative;
+        padding: 5px;     
+        width: 83.3333%;
+        float: left;
+    }
+    .rtk-col-xs-11{
+        position: relative;
+        padding: 5px;    
+        width: 91.6666%;
+        float: left;
+    }
+    .rtk-col-xs-12{
+        position: relative;
+        padding: 5px;       
+        width: 100%;
+        float: left;
     }
 }
