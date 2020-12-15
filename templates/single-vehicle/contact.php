@@ -125,7 +125,7 @@ $width = 'width:'  . $width . '%';
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
-		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] ==  'Trocar'){
+		else if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] ==  'Trocar'){
 			$nome         	= $_POST['wpcm_name_cliente'];
 			$payment	  	= $_POST['wpcm_payment_method'];
 			$marca 		  	= "Marca: "   . $_POST['wpcm-marca'];
