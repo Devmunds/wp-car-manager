@@ -1,7 +1,7 @@
 <!--Modified By Reteck-->
 <div class="rtk-col-md-2 rtk-col-sm-4 rtk-col-xs-6">
     <div class="wpcm-listings-item<?php echo( $vehicle->is_featured() ? " wpcm-listings-item-featured" : "" ); ?>">
-        <a target="_black" href="<?php echo $url; ?>" title="<?php echo  $vehicle->get_title();?>">
+        <a target="_blank" href="<?php echo $url; ?>" title="<?php echo  $vehicle->get_title();?>">
             <?php do_action( 'wpcm_vehicle_listings_item_start', $vehicle ); ?>
             <div class="wpcm-listings-item-image-wrapper">
                 <?php do_action( 'wpcm_vehicle_listings_item_image_start', $vehicle ); ?>
