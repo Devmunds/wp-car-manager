@@ -48,9 +48,10 @@ class Pagination {
 		$dots       = false;
 
 		// prev link
+		/*
 		if ( $args['prev_next'] && $current && 1 < $current ) {
-			$page_links[] = '<a class="prev page-numbers" href="javascript:;" data-page="prev">' . $args['prev_text'] . '</a>';
-		}
+			//$page_links[] = '<a class="prev page-numbers" href="javascript:;" data-page="prev">' . $args['prev_text'] . '</a>';
+		}*/
 
 		// the actual pagination links
 		for ( $n = 1; $n <= $total; $n ++ ) {
@@ -70,9 +71,11 @@ class Pagination {
 		}
 
 		// next link
+		/*
 		if ( $args['prev_next'] && $current && ( $current < $total || - 1 == $total ) ) {
 			$page_links[] = '<a class="next page-numbers" href="javascript:;" data-page="next">' . $args['next_text'] . '</a>';
 		}
+		*/
 
 		$r .= "<ul class='page-numbers'>\n\t<li>";
 		$r .= join( "</li>\n\t<li>", $page_links );

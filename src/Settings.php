@@ -246,7 +246,7 @@ class Settings {
 			'decimal_separator'     => '.',
 			'thousand_separator'    => ',',
 			'distance_unit'         => 'miles',
-			'date_format'           => 'Y',
+			'date_format'           => 'Y-m-d',
 			'contact_email'         => get_option( 'admin_email', '' ),
 			'contact_phone'         => '',
 			'summary_data'          => apply_filters( 'wpcm_summary_data_fields', array(

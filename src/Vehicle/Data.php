@@ -43,8 +43,8 @@ class Data {
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'A6', 'wp-car-manager' )
 			),			
-			'frdate'       => array(
-				'type'        => 'date',
+			'frdate'       => array( /*corrigir*/
+				'type'        => 'text',
 				'label'       => __( 'Ano do veiculo', 'wp-car-manager' ),
 				'key'         => 'frdate',
 				'required'    => true,

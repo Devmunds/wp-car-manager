@@ -2,6 +2,21 @@
  * By Devmunds
  * Version: 1.0.0
  */
+/*BUG SETAS*/
+.prev{
+    display: none !important;
+}
+.next{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
 .res-container{
     max-width: 100% !important;
 }
