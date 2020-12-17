@@ -354,6 +354,33 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_title' ) ) {
 	}
 }
 
+//By devmunds DATA
+//Bug ano veiculo
+
+if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_anomodelo' ) ) {
+	function wpcm_template_submit_car_form_fields_car_anomodelo( $vehicle ) {
+		?>
+		<fieldset class="wpcm-fieldset-title wpcm-hidden">
+			<label for="title"><?php _e( 'Ano Modelo', 'wp-car-manager' ); ?></label>
+
+			<div class="wpcm-field">
+				<?php
+					wp_car_manager()->service( 'template_manager' )->get_template_part( 'submit-car-form/form-fields/text', '', array(
+					'field'   => array(
+						'key'         => 'anomodelo',
+						'placeholder' => __( 'Teste', 'wp-car-manager' ) 
+					),
+					'value'   => $vehicle->get_anomodelo(),
+					'vehicle' => $vehicle
+				) );				
+				?>
+			</div>
+		</fieldset>
+		<?php
+	}
+}
+
+
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_description' ) ) {
 	function wpcm_template_submit_car_form_fields_car_description( $vehicle ) {
 		?>

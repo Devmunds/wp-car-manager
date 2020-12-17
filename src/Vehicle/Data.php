@@ -42,14 +42,22 @@ class Data {
 				'key'         => 'body_style',
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'A6', 'wp-car-manager' )
-			),			
-			'frdate'       => array( /*corrigir*/
+			),
+			/*			
+			'frdate'       => array( 
 				'type'        => 'text',
 				'label'       => __( 'Ano do veiculo', 'wp-car-manager' ),
 				'key'         => 'frdate',
 				'required'    => true,
 				'placeholder' => 'Ano'
-			),
+			),*/
+			'anomodelo'        => array(
+				'type'        => 'text',
+				'label'       => __( 'Ano Fab / Mod', 'wp-car-manager' ),
+				'key'         => 'anomodelo',
+				'required'    => true,
+				'placeholder' => '2020 / 2021' 
+			),			
 			'price'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Price', 'wp-car-manager' ),
@@ -99,21 +107,7 @@ class Data {
 				'key'         => 'engine',
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( '2.0 TDI', 'wp-car-manager' )
-			),/*
-			'power_kw'        => array(
-				'type'        => 'text',
-				'label'       => __( 'Power kW', 'wp-car-manager' ),
-				'key'         => 'power_kw',
-				'required'    => false,
-				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( '125', 'wp-car-manager' )
 			),
-			'power_hp'        => array(
-				'type'        => 'text',
-				'label'       => __( 'Power hp', 'wp-car-manager' ),
-				'key'         => 'power_hp',
-				'required'    => false,
-				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( '170', 'wp-car-manager' )
-			),*/
 		), $type );
 	}
 

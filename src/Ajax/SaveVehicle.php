@@ -147,11 +147,12 @@ class SaveVehicle extends Ajax {
 
 			// set Vehicle data in object
 			$vehicle->set_title( $data['title']);
+			$vehicle->set_anomodelo( $data['anomodelo']);
 			$vehicle->set_description( $data['description'] );
 			$vehicle->set_condition( $data['condition'] );
 			$vehicle->set_make( $data['make'] );
 			$vehicle->set_model( $data['model'] );
-			$vehicle->set_frdate( $frdate_dt );
+			//$vehicle->set_frdate( $frdate_dt );
 			$vehicle->set_price( $data['price'] );
 			$vehicle->set_mileage( $data['mileage'] );
 			$vehicle->set_fuel_type( $data['fuel_type'] );

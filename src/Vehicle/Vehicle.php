@@ -39,6 +39,9 @@ abstract class Vehicle {
 	private $frdate;
 
 	/** @var String */
+	private $anomodelo;
+
+	/** @var String */
 	private $price;
 
 	/** @var String */
@@ -91,6 +94,18 @@ abstract class Vehicle {
 		return $this->title;
 	}
 
+	//Anomodelo
+	public function get_anomodelo (){
+		return $this->anomodelo;
+	}
+
+
+		/**
+	 * @param String $anomodelo
+	 */
+	public function set_anomodelo( $anomodelo ) {
+		$this->anomodelo =  $anomodelo;
+	}
 	/**
 	 * @param String $title
 	 */
