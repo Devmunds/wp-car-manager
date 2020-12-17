@@ -159,10 +159,11 @@ class WordPressRepository implements VehicleRepository {
 		// check if new or existing
 		if ( 0 == $vehicle->get_id() ) {
 
+			//modificar
 			// create
 			//Update By Reteck
 			$vehicle_id = wp_insert_post( array(
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_author'  => $vehicle->get_author(),
@@ -178,13 +179,13 @@ class WordPressRepository implements VehicleRepository {
 			$vehicle->set_id( $vehicle_id );
 
 		} else {
-
+			//modificar
 			// update
 			//Update by Reteck
 			$vehicle_id = wp_update_post( array(
 				'ID'           => $vehicle->get_id(),
-				'post_name'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_formatted_frdate() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_name'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_status'  => $vehicle->get_status()

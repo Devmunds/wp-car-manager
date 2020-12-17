@@ -15,7 +15,7 @@
             </div>
             <div class="wpcm-listings-item-meta">
                 <?php do_action( 'wpcm_vehicle_listings_item_meta_start', $vehicle ); ?>              
-                    <label><?php echo $vehicle->get_formatted_frdate() . " - " . $vehicle->get_color() . " - " . $vehicle->get_fuel_type();?></label><br/>
+                    <label><?php echo $vehicle->get_anomodelo() . " - " . $vehicle->get_color() . " - " . $vehicle->get_fuel_type();?></label><br/>
                     <span><?php echo "R$ " . number_format($vehicle->get_price(), 2, ',', '.') ; ?></span>         
                 <?php do_action( 'wpcm_vehicle_listings_item_meta_end', $vehicle ); ?>
             </div>

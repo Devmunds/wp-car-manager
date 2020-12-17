@@ -14,7 +14,7 @@
 			<li class="wpcm-title"><a href="<?php echo $url; ?>"><?php echo $vehicle->get_title() ?></a></li><!--Update by Reteck-->
 			<li class="wpcm-price"><?php echo $price; ?></li>
 			<li><?php echo $mileage; ?></li>
-			<li><?php echo $frdate; ?></li>
+			<li><?php echo $anomodelo; ?></li>
 		</ul>
 		<?php do_action( 'wpcm_vehicle_dashboard_item_data_end', $vehicle ); ?>
 	</div>
