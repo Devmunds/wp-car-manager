@@ -66,6 +66,7 @@ add_action( 'wpcm_vehicle_content_features', 'wpcm_template_single_features', 30
 
 // Remove the power hp from data template parts as we display this in the power kw template part
 add_filter( 'wpcm_single_vehicle_data_fields', 'wpcm_template_data_remove_power_hp', 10, 2 );
+add_filter( 'wpcm_single_vehicle_data_fields', 'wpcm_template_data_remove_anofab', 10, 2 );
 /**
  ************************ LISTINGS ************************
  */
@@ -81,7 +82,8 @@ add_action( 'wpcm_before_listings_results', 'wpcm_template_vehicle_listings_filt
 add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_make', 10 );
 add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_model', 10 );
 add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_price', 15 );
-add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_frdate', 15 );
+//add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_frdate', 15 );
+add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_anomod', 15 );
 add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_mileage', 15 );
 add_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_button', 15 );
 

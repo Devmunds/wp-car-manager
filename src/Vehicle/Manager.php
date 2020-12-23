@@ -125,6 +125,7 @@ class Manager {
 					case 'price_from':
 					case 'mileage_from':
 					case 'frdate_from':
+					case 'anomod_from':
 						$filter['key']     = 'wpcm_' . str_ireplace( '_from', '', $filter_key );
 						$filter['compare'] = '>=';
 						$filter['value']   = absint( $filter_val );

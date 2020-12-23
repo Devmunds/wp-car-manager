@@ -223,6 +223,13 @@ if ( ! function_exists( 'wpcm_template_data_remove_power_hp' ) ) {
 	}
 }
 
+if ( ! function_exists( 'wpcm_template_data_remove_anofab' ) ) {
+	function wpcm_template_data_remove_anofab( $fields, $vehicle ) {
+		unset( $fields['anofab'] );
+
+		return $fields;
+	}
+}
 
 /**
  * LISTINGS VEHICLE
@@ -295,6 +302,13 @@ if ( ! function_exists( 'wpcm_template_vehicle_listings_filters_frdate' ) ) {
 	}
 }
 
+//by devmunds
+if ( ! function_exists( 'wpcm_template_vehicle_listings_filters_anomod' ) ) {
+	function wpcm_template_vehicle_listings_filters_anomod() {
+		wp_car_manager()->service( 'template_manager' )->get_template_part( 'listings/filters/anomod' );
+	}
+}
+
 if ( ! function_exists( 'wpcm_template_vehicle_listings_filters_mileage' ) ) {
 	function wpcm_template_vehicle_listings_filters_mileage() {
 		wp_car_manager()->service( 'template_manager' )->get_template_part( 'listings/filters/mileage' );
@@ -357,8 +371,8 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_title' ) ) {
 //By devmunds DATA
 //Bug ano veiculo
 
-if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_anomodelo' ) ) {
-	function wpcm_template_submit_car_form_fields_car_anomodelo( $vehicle ) {
+if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_anomod' ) ) {
+	function wpcm_template_submit_car_form_fields_car_anomod( $vehicle ) {
 		?>
 		<fieldset class="wpcm-fieldset-title wpcm-hidden">
 			<label for="title"><?php _e( 'Ano Modelo', 'wp-car-manager' ); ?></label>
@@ -367,10 +381,10 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_anomodelo' ) )
 				<?php
 					wp_car_manager()->service( 'template_manager' )->get_template_part( 'submit-car-form/form-fields/text', '', array(
 					'field'   => array(
-						'key'         => 'anomodelo',
+						'key'         => 'anomod',
 						'placeholder' => __( 'Teste', 'wp-car-manager' ) 
 					),
-					'value'   => $vehicle->get_anomodelo(),
+					'value'   => $vehicle->get_anomod(),
 					'vehicle' => $vehicle
 				) );				
 				?>

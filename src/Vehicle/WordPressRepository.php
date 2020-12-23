@@ -95,7 +95,8 @@ class WordPressRepository implements VehicleRepository {
 		$data->make              = get_post_meta( $post->ID, $pm_prefix . 'make', true );
 		$data->model             = get_post_meta( $post->ID, $pm_prefix . 'model', true );
 		$data->price             = get_post_meta( $post->ID, $pm_prefix . 'price', true );
-		$data->anomodelo   = get_post_meta( $post->ID, $pm_prefix . 'anomodelo', true );
+		$data->anomod   = get_post_meta( $post->ID, $pm_prefix . 'anomod', true );
+		$data->anofab   = get_post_meta( $post->ID, $pm_prefix . 'anofab', true );
 		$data->color             = get_post_meta( $post->ID, $pm_prefix . 'color', true );
 		$data->mileage           = get_post_meta( $post->ID, $pm_prefix . 'mileage', true );
 		$data->fuel_type         = get_post_meta( $post->ID, $pm_prefix . 'fuel_type', true );
@@ -163,7 +164,7 @@ class WordPressRepository implements VehicleRepository {
 			// create
 			//Update By Reteck
 			$vehicle_id = wp_insert_post( array(
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomod() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_author'  => $vehicle->get_author(),
@@ -184,8 +185,8 @@ class WordPressRepository implements VehicleRepository {
 			//Update by Reteck
 			$vehicle_id = wp_update_post( array(
 				'ID'           => $vehicle->get_id(),
-				'post_name'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
-				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomodelo() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_name'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomod() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
+				'post_title'   => $vehicle->get_make_name() . " " . $vehicle->get_model_name() . " " . $vehicle->get_body_style() . " " . $vehicle->get_anomod() . " " . $vehicle->get_engine() .  " " . $vehicle->get_formatted_transmission(),
 				'post_content' => $vehicle->get_description(),
 				'post_excerpt' => $vehicle->get_short_description(),
 				'post_status'  => $vehicle->get_status()

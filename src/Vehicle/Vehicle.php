@@ -39,7 +39,9 @@ abstract class Vehicle {
 	private $frdate;
 
 	/** @var String */
-	private $anomodelo;
+	private $anomod;
+
+	private $anofab;
 
 	/** @var String */
 	private $price;
@@ -94,18 +96,28 @@ abstract class Vehicle {
 		return $this->title;
 	}
 
-	//Anomodelo
-	public function get_anomodelo (){
-		return $this->anomodelo;
+	//anomod
+	public function get_anomod (){
+		return $this->anomod;
+	}
+
+	//anofab
+	public function get_anofab(){
+		return $this->anofab;
 	}
 
 
 		/**
-	 * @param String $anomodelo
+	 * @param String $anomod
 	 */
-	public function set_anomodelo( $anomodelo ) {
-		$this->anomodelo =  $anomodelo;
+	public function set_anomod( $anomod ) {
+		$this->anomod =  $anomod;
 	}
+
+	public function set_anofab($anofab){
+		$this->anofab = $anofab;
+	}
+
 	/**
 	 * @param String $title
 	 */

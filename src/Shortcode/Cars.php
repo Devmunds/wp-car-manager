@@ -23,7 +23,9 @@ class Cars extends Shortcode {
 		add_rewrite_tag( '%mileage_from%', '([^&]+)' );
 		add_rewrite_tag( '%mileage_to%', '([^&]+)' );
 		add_rewrite_tag( '%frdate_from%', '([^&]+)' );
-		add_rewrite_tag( '%frdate_to%', '([^&]+)' );
+		add_rewrite_tag( '%frdate_to%', '([^&]+)' );		
+		add_rewrite_tag( '%anomod_from%', '([^&]+)' );
+		add_rewrite_tag( '%anomod_to%', '([^&]+)' );				
 	}
 
 	/**

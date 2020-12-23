@@ -106,8 +106,8 @@ class CustomColumns {
 			case 'mileage' :
 				$val = $vehicle->get_formatted_mileage();
 				break;
-				case 'anomodelo' :
-					$val = $vehicle->get_anomodelo();
+				case 'anomod' :
+					$val = $vehicle->get_anomod();
 					break;				
 			case 'frdate' :
 				$val = $vehicle->get_formatted_frdate();

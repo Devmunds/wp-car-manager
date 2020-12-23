@@ -51,13 +51,22 @@ class Data {
 				'required'    => true,
 				'placeholder' => 'Ano'
 			),*/
-			'anomodelo'        => array(
-				'type'        => 'text',
-				'label'       => __( 'Ano Fab / Mod', 'wp-car-manager' ),
-				'key'         => 'anomodelo',
+			'anofab'        => array(
+				'type'        => 'select',
+				'options'  => self::get_anofab(),
+				'label'       => __( 'Ano Fabricação', 'wp-car-manager' ),
+				'key'         => 'anofab',
 				'required'    => true,
-				'placeholder' => '2020 / 2021' 
-			),			
+				'placeholder' => '2020' 
+			),										
+			'anomod'        => array(
+				'type'        => 'select',
+				'options' => self::get_anomod(),
+				'label'       => __( 'Ano Modelo', 'wp-car-manager' ),
+				'key'         => 'anomod',
+				'required'    => true,
+				'placeholder' => '2021' 
+			),
 			'price'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Price', 'wp-car-manager' ),
@@ -149,6 +158,45 @@ class Data {
 			'GNV e Álcool' 	=> __( 'GNV e Álcool', 'wp-car-manager' )
 		) );
 	}
+
+
+	//By devmunds
+public static function get_anomod(){
+
+	$anoss = array();
+
+	for ( $i = date( 'Y', time() )+1; $i >= 1900; $i -- ) {
+
+		if ( $i < 1970 && 0 != ( $i % 5 ) ) {
+			continue;
+		}
+
+		$anoss[0] = __('Selecione o ano de modelo', 'wp-car-manager');
+		$anoss[$i] =  __( $i, 'wp-car-manager' );		
+	}
+
+	return  $anoss;
+}
+
+public static function get_anofab(){
+
+	$anoss = array();
+
+	for ( $i = date( 'Y', time() )+1; $i >= 1900; $i -- ) {
+
+		if ( $i < 1970 && 0 != ( $i % 5 ) ) {
+			continue;
+		}
+
+		$anoss[0] = __('Selecione o ano de fabricação', 'wp-car-manager');
+		$anoss[$i] =  __( $i, 'wp-car-manager' );		
+	}
+
+	return  $anoss;
+}
+
+
+
 
 	/**
 	 * Remove fields that have no value data
