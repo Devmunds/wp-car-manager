@@ -105,7 +105,7 @@ class GetVehicleResults extends Ajax {
 					'price'       => $vehicle->get_formatted_price(),
 					'mileage'     => $vehicle->get_formatted_mileage(),
 					'anomod' => $vehicle->get_anomod(),
-					'anofab' => $vehicle->gte_anofab(),
+					//'anofab' => $vehicle->gte_anofab(), add apenas se for exibir no front
 					//'frdate'      => $vehicle->get_formatted_frdate(),
 					'vehicle'     => $vehicle
 				) );

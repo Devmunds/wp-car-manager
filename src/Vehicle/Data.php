@@ -163,7 +163,7 @@ class Data {
 	//By devmunds
 public static function get_anomod(){
 
-	$anoss = array();
+	$anomod = array();
 
 	for ( $i = date( 'Y', time() )+1; $i >= 1900; $i -- ) {
 
@@ -171,16 +171,16 @@ public static function get_anomod(){
 			continue;
 		}
 
-		$anoss[0] = __('Selecione o ano de modelo', 'wp-car-manager');
-		$anoss[$i] =  __( $i, 'wp-car-manager' );		
+		$anomod[0] = __('Selecione o ano de modelo', 'wp-car-manager');
+		$anomod[$i] =  __( $i, 'wp-car-manager' );		
 	}
 
-	return  $anoss;
+	return  apply_filters('wpcm_anomod', $anomod);
 }
 
 public static function get_anofab(){
 
-	$anoss = array();
+	$anofab = array();
 
 	for ( $i = date( 'Y', time() )+1; $i >= 1900; $i -- ) {
 
@@ -188,11 +188,11 @@ public static function get_anofab(){
 			continue;
 		}
 
-		$anoss[0] = __('Selecione o ano de fabricação', 'wp-car-manager');
-		$anoss[$i] =  __( $i, 'wp-car-manager' );		
+		$anofab[0] = __('Selecione o ano de fabricação', 'wp-car-manager');
+		$anofab[$i] =  __( $i, 'wp-car-manager' );		
 	}
 
-	return  $anoss;
+	return  apply_filters('wpcm_anofab', $anofab);
 }
 
 
