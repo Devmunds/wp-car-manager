@@ -92,8 +92,11 @@ jQuery(function($) {
     // setup select2
     $form.find('#make').select2();
     $form.find('#model').select2();
+    $form.find('#anomod').select2();
+    $form.find('#anofab').select2(); 
 
     // bind listener to make field
+
     $form.find('#make').change(function() {
         $form.wpcm_update_models();
     });
@@ -204,6 +207,8 @@ jQuery(function($) {
 
         if (!$form.wpcm_check_required()) {
             $form.wpcm_enable();
+            scroll(0,0);              
+            alert("Você precisa preencher todos os campos obrigatórios!");
             return false;
         }
 

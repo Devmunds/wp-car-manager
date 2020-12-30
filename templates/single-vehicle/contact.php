@@ -136,7 +136,7 @@ $width = 'width:'  . $width . '%';
 			
 			$whats_number 	= $_POST['wpcm-contact-vendedor'];
 			
-			$textzap = "Olá, sou " . $nome . ".|Vi seu anúncio no site Quero Acelerar e gostaria de trocar meu veículo |" . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." km rodados, pelo seu " . get_permalink() . "| Forma de pagamento: " . $payment;
+			$textzap = "Olá, sou " . $nome . ".|Vi seu anúncio no site Quero Acelerar e gostaria de trocar meu veículo |" . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|KM rodada: " .$km_atual ."|Pelo seu " . get_permalink() . "|Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 		else{

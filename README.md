@@ -37,3 +37,7 @@ Image gallery created with [prettyPhoto](http://www.no-margin-for-errors.com/pro
 PHP version compatibility checks done by [WPupdatePHP](https://github.com/WPupdatePHP/wp-update-php).
 Steering Wheel icon made by [Freepik](http://www.flaticon.com/authors/freepik).
 Tooltips are done with [TippedJS](http://www.tippedjs.com/).
+
+#Modificações
+
+### VS: 1.4.8

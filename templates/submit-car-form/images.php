@@ -67,7 +67,7 @@
 
 	<div class="wpcm-car-wrap-submission">
 		<div class="wpcm-car-wrap-submission-header">
-			<h3  for="wpcm-car-submission-images"><?php _e( 'Genrenciar fotos', 'wp-car-manager' ); ?></h3>
+			<h3  for="wpcm-car-submission-images"><?php _e( 'Gerenciar fotos', 'wp-car-manager' ); ?></h3>
 			<strong  for="wpcm-car-submission-images"><?php _e( 'Clique no quadro a baixo para enviar fotos', 'wp-car-manager' ); _e(' | Você pode enviar até: ' . get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true) . ' de imagens', 'wp-car-manager'); ?></strong><br/>
 			<span  for="wpcm-car-submission-images"><?php _e( 'You can upload multiple images at the same time, the first image will be your thumbnail.', 'wp-car-manager' ); ?></span><br/>
 			<span id="max_photos_upload" hidden><?php echo $max_photos_upload; ?></span>	

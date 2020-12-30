@@ -22,6 +22,7 @@ class Data {
 				'label'    => __( 'Condition', 'wp-car-manager' ),
 				'key'      => 'condition',
 				'required' => true,
+				
 			),
 			'make'         => array(
 				'type'     => 'select',
@@ -40,7 +41,7 @@ class Data {
 				'type'        => 'text',
 				'label'       => __( 'Versão', 'wp-car-manager' ),
 				'key'         => 'body_style',
-				'required'    => false,
+				'required'    => true,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'A6', 'wp-car-manager' )
 			),
 			/*			
@@ -57,7 +58,7 @@ class Data {
 				'label'       => __( 'Ano Fabricação', 'wp-car-manager' ),
 				'key'         => 'anofab',
 				'required'    => true,
-				'placeholder' => '2020' 
+				
 			),										
 			'anomod'        => array(
 				'type'        => 'select',
@@ -65,7 +66,7 @@ class Data {
 				'label'       => __( 'Ano Modelo', 'wp-car-manager' ),
 				'key'         => 'anomod',
 				'required'    => true,
-				'placeholder' => '2021' 
+				 
 			),
 			'price'        => array(
 				'type'        => 'text',
@@ -86,7 +87,7 @@ class Data {
 				'options'  => self::get_fuel_type(),
 				'label'       => __( 'Fuel Type', 'wp-car-manager' ),
 				'key'         => 'fuel_type',
-				'required'    => false,
+				'required'    => true,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'Gas', 'wp-car-manager' )
 			),
 			'color'        => array(
@@ -101,7 +102,7 @@ class Data {
 				'options'  => self::get_transmissions(),
 				'label'    => __( 'Transmission', 'wp-car-manager' ),
 				'key'      => 'transmission',
-				'required' => false,
+				'required' => true,
 			),
 			'doors'        => array(
 				'type'        => 'text',
@@ -127,8 +128,10 @@ class Data {
 	 */
 	public static function get_conditions() {
 		return apply_filters( 'wpcm_conditions', array(
+			'0'  => __( 'Selecione uma condição', 'wp-car-manager' ),
 			'new'  => __( 'New', 'wp-car-manager' ),
-			'used' => __( 'Used', 'wp-car-manager' )
+			'used' => __( 'Used', 'wp-car-manager' ),
+			'repasse' => __( 'Repasse', 'wp-car-manager' )
 		) );
 	}
 
@@ -139,6 +142,7 @@ class Data {
 	 */
 	public static function get_transmissions() {
 		return apply_filters( 'wpcm_transmissions', array(
+			'0'      => __( 'Selecione um tipo de transmissão', 'wp-car-manager' ),
 			'automatic'      => __( 'Automatic', 'wp-car-manager' ),
 			'manual'         => __( 'Manual', 'wp-car-manager' ),
 			'semi-automatic' => __( 'Semi-Automatic', 'wp-car-manager' )
@@ -147,6 +151,7 @@ class Data {
 	//By Reteck
 	public static function get_fuel_type() {
 		return apply_filters( 'wpcm_fuel_type', array(
+			'0'       	=> __( 'Selecione um tipo de combustível', 'wp-car-manager' ),
 			'Flex'       	=> __( 'Flex', 'wp-car-manager' ),
 			'Gasolina'   	=> __( 'Gasolina', 'wp-car-manager' ),
 			'Diesel'      	=> __( 'Diesel', 'wp-car-manager' ),

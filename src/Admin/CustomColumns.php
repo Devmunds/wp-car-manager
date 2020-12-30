@@ -48,9 +48,10 @@ class CustomColumns {
 		$columns['model']   = __( 'Model', 'wp-car-manager' );
 		$columns['price']   = __( 'Price', 'wp-car-manager' );
 		$columns['mileage'] = __( 'Mileage', 'wp-car-manager' );
-		$columns['frdate']  = __( 'FR Date', 'wp-car-manager' );
-		$columns['expires'] = __( 'Expires', 'wp-car-manager' );
-		$columns['actions'] = __( 'Actions', 'wp-car-manager' );
+		$columns['anomod']  = __( 'Ano', 'wp-car-manager' );
+		$columns['author']  = __( 'Anunciante', 'wp-car-manager' );
+		/*$columns['expires'] = __( 'Expires', 'wp-car-manager' );
+		$columns['actions'] = __( 'Actions', 'wp-car-manager' );*/
 
 		return $columns;
 	}

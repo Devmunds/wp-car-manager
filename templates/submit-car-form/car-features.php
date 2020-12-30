@@ -1,4 +1,4 @@
-<h2><?php _e( 'Car Features', 'wp-car-manager' ); ?></h2>
+<h2><?php _e( 'Itens do carro' ); ?></h2>
 <fieldset class="wpcm-fieldset-features">
 	<div class="wpcm-field wpcm-field-fw">
 		<ul class="wpcm-form-features">
