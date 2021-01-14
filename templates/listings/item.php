@@ -10,8 +10,8 @@
             </div>
             <div class="wpcm-listings-item-description">
                 <?php do_action( 'wpcm_vehicle_listings_item_description_start', $vehicle ); ?>
-                <h2><?php echo  $vehicle->get_make_name() ; ?></h2>
-                <h3><?php  echo $vehicle->get_engine() .  " " . $vehicle->get_fuel_type() . " " . $vehicle->get_formatted_transmission(); ?></h3>
+                <h2><?php echo  $vehicle->get_make_name() . " " . $vehicle->get_model_name(); ?></h2>
+                <h3><?php  echo $vehicle->get_body_style()  . " " . $vehicle->get_engine() ." " . $vehicle->get_fuel_type() . " " . $vehicle->get_formatted_transmission(); ?></h3>
                 <?php do_action( 'wpcm_vehicle_listings_item_description_end', $vehicle ); ?>
             </div>
             <div class="wpcm-listings-item-meta">
