@@ -324,15 +324,10 @@
 /*STYLE GRID VEHICLES*/
 .wpcm-listings-item {
     background-color  : #ffffff !important;
-    -webkit-box-shadow: 0px 0px 3px 1px #f3f5f8;
-    box-shadow        : 0px 0px 3px 1px #f3f5f8;
+    box-shadow: rgba(158, 184, 209, 0.41) 0px 2px 9px 0px;
     border            : none !important;
     overflow: hidden;
-    min-height: 300px;
-    height: 305px;
-    max-height: 330px;
-    text-align: center;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 .wpcm-listings-item-meta ul li {
     padding-right: 10px !important;
@@ -348,29 +343,48 @@
     overflow      : hidden !important;
     width         : 100% !important;
     text-transform: uppercase;
-    padding: 10px;
-    height: 55px;
+    padding: 8px 10px;
+    height: 75px;
 }
 .entry-header h2 {
     /*page single vehicle*/
     text-transform: uppercase !important;
     display       : none !important;
 }
-.wpcm-listings-item-description h3 {
-    font-size  : 16px;
-    font-weight: bold;
-    text-align : center;
+.wpcm-listings-item-description h2 {
+    font-size  : 13px;
+    font-weight: 500;
+    margin: 0;
+    color: #000000;
 }
+.wpcm-listings-item-description h3 {
+    color: #8b8c99;
+    font-size  : 14px;
+    margin-top: 5px;
+}
+.wpcm-listings-item-meta{
+    padding: 8px 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.wpcm-item-price span{
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+.wpcm-item-ano-model-fab span{
+    color: #8b8c99;
+    font-size: 13px;
+    margin: 0;
+    margin-top: 5px;
+}
+.pull-right{
+    float: right;
+}
+
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
     margin-top: 10px;
-}
-.wpcm-listings-item-meta label {
-    text-align: center;
-    color     : #474747;
-}
-.wpcm-listings-item-meta span {
-    color      : #000000 !important;
-    font-weight: 700;
 }
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper {
     position: relative !important;
