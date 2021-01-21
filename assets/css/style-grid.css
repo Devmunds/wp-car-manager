@@ -271,6 +271,9 @@
 */
 
 @media (min-width: 768px) and (max-width: 959px) and (orientation: landscape) {
+    .wpcm-item-menu{
+        padding: 30px;
+    }
     .rtk-col-sm-1{
         position: relative;
         padding: 5px;      
@@ -351,6 +354,9 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+    .wpcm-item-menu{
+        padding: 30px;
+    }    
     .rtk-col-xs-1{
         position: relative;
         padding: 5px;   
@@ -431,6 +437,9 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .wpcm-item-menu{
+        padding: 30px;
+    }    
     .rtk-col-xs-1{
         position: relative;
         padding: 5px;    

@@ -478,7 +478,7 @@
 }
 .wpcm-item-menu i{
     color: #00749e;
-    font-size: 50px;
+    font-size: 50px;    
 }
 .wpcm-item-menu h3{
     margin-top: 15px;
@@ -580,7 +580,7 @@
     border-radius   : 25px;
 }
 .wpcm-button:hover {
-    background-color: #0074e9 !important;
+    background-color: #00749e !important;
 }
 
 
