@@ -551,11 +551,11 @@
     font-size: 16px;
 }
 .wpcm-dashboard-button-edit{
-    background-color: #5db75d;
+    background-color: #00b7e9;
     border-radius: 25px !important;
 }
 .wpcm-dashboard-button-delete{
-    background-color: #d95450;
+    background-color: #ff0844;
     border-radius: 25px !important;
 }
 /*ANUNCIOS*/
@@ -575,12 +575,12 @@
 /*====================================================================*/
 /*BUTTON GERAL*/
 .wpcm-button {
-    background-color: #230e80 !important;
+    background-color: #00b7e9 !important;
     margin-left     : 15px;
     border-radius   : 25px;
 }
 .wpcm-button:hover {
-    background-color: #230e80 !important;
+    background-color: #0074e9 !important;
 }
 
 
