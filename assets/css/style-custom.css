@@ -11,12 +11,6 @@
 }
 
 
-
-
-
-
-
-
 .res-container{
     max-width: 100% !important;
 }
@@ -464,7 +458,7 @@
 /*====================================================================*/
 /*NAVA DASHBOARD*/
 .wpcm-wrap-menu{
-    background-color: #230e80;
+    background-color: #00749e;
     overflow: hidden;
     width: 100%;
     padding: 10px;
@@ -483,7 +477,7 @@
     padding: 20px;
 }
 .wpcm-item-menu i{
-    color: #230e80;
+    color: #00749e;
     font-size: 50px;
 }
 .wpcm-item-menu h3{
@@ -514,13 +508,13 @@
     color: rgb(255, 255, 255);
 }
 .wpcm-painel-item-01{
-    background-color: #3388cd;
+    background-color: #ff0844;
 }
 .wpcm-painel-item-02{
-    background-color: #f8ab3e;
+    background-color: #00b7e9;
 }
 .wpcm-painel-item-03{
-    background-color: #21c25c;
+    background-color: #00749e;
 }
 
 .wpcm-wrap-profile li{
