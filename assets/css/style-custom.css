@@ -3,6 +3,39 @@
  * Version: 1.0.0
  */
 /*BUG SETAS*/
+
+
+/*
+* @ Filtro de pesquisa
+*/
+
+.wpcm-wrap-vehicle-filters{
+    background-color: #ffffff !important;
+    box-shadow: rgb(158 184 209 / 41%) 0px 2px 9px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.wpcm-vehicle-filters{
+    background-color: #ffffff !important;
+}
+.wpcm-vehicle-sort{
+    background-color: #ffffff !important;
+    border-bottom: none !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button{
+    padding-top: 6px !important;
+}
+.wpcm-filter-button input{
+    background-color: #00b7e9 !important;
+    border: 1px solid #00b7e9 !important;
+}
+.entry{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
 .prev{
     display: none !important;
 }
@@ -62,23 +95,23 @@
 }
 
 .wpcm-ligue-nos a {
-    background-color: #0079BF;
+    background-color: #00b7e9;
     color           : #fff;
 }
 
 .wpcm-email a {
-    background-color: #1380BF;
+    background-color: #00749e;
     color           : #fff;
 }
 
 .wpcm-location a {
-    background-color: #004973;
+    background-color: #00b7e9;
     color           : #fff;
 }
 
 
 .wpcm-whatsapp a {
-    background-color: #2ec62e;
+    background-color: #00e676;
     color           : #fff;
 }
 
@@ -262,7 +295,7 @@
     overflow          : hidden;
 }
 .wpcm-rtk-itens-vehicle {
-    background-color: #244e9e;
+    background-color: #00749e;
     color           : #fff;
 }
 .wpcm-rtk-itens-vehicle ul {
@@ -280,7 +313,7 @@
     border-radius  : 5px;
 }
 .wpcm-rtk-itens-vehicle ul li:hover {
-    background-color: #1c3a72;
+    background-color: #06688b;
     cursor          : pointer;
 }
 .wpcm-rtk-itens-vehicle h2 {

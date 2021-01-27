@@ -28,15 +28,15 @@ $width = 'width:'  . $width . '%';
 	<h3>Fale com o vendedor</h3>
 	<?php if( ! empty($phone_number) || ! empty($phone_number_02)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-ligue-nos" style="<?php echo $width; ?>">
-		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <h6><?php _e( ' Ligue-nos', 'wp-car-manager' ); ?></h6> </a>
+		<a href="javascript:wpcm_modal_contact_open();"> <h6><i class="fas fa-phone"></i><?php _e( ' Ligar', 'wp-car-manager' ); ?></h6> </a>
 	</div>
 	<?php endif; if( ! empty($email)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-email" style="<?php echo $width; ?>">
-		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i><h6> <?php _e( 'E-mail', 'wp-car-manager' ); ?></h6></a>
+		<a target="_blank" href="mailto:<?php echo $email; ?>" ><h6><i class="fas fa-envelope"></i> <?php _e( 'E-mail', 'wp-car-manager' ); ?></h6></a>
 	</div>
 	<?php endif; if( ! empty($location)): ?>
 	<div class="wpcm-contact-buttons wpcm-contact-col wpcm-location" style="<?php echo $width; ?>">
-		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i><h6> <?php _e( 'Localização', 'wp-car-manager' ) ?></h6> </a>
+		<a target="_blank" href="<?php echo $location; ?>" ><h6><i class="fas fa-map-marker-alt"></i> <?php _e( 'Local', 'wp-car-manager' ) ?></h6> </a>
 	</div>
 	<?php endif; if ( ! empty($whatsapp_01) || ! empty($whatsapp_02) || empty($whatsapp_03) ): ?>
 		<div class="wpcm-contact-buttons wpcm-contact-col-1 wpcm-whatsapp">
